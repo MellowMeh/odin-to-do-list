@@ -1,3 +1,51 @@
-body {
-    background-color: blue;
+/*Default CSS Rules*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style-type: none;
 }
+
+:root {
+    font-size: 16px;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+
+/*Default CSS Custom Variables*/
+:root {
+    --default-size: clamp(2.25rem, 2vw + 1.5rem, 3.25rem);
+    --default-max-inline-size: 66ch;
+    --default-line-height: 1.65;
+    --default-font-family: 'Nimbus Mono PS', 'Courier New', monospace;
+    --dark-grey: #1b1b1b;
+    --light-grey: #80868B;
+    --blue: #4285F4;
+    --white: whitesmoke;
+}
+
+/*Webpage Specific Rules*/
