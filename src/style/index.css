@@ -1,4 +1,4 @@
-/*Default CSS Rules*/
+/*CSS Reset*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -35,6 +35,30 @@ textarea:focus, input:focus {
     outline: none;
 }
 
+/*Dark and Light Themes by System Preference*/
+:root {
+    --color-base-bg: var(--white);
+    --color-base-text: var(--dark-grey);
+    --theme-name: "light";
+  }
+  
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-base-bg: var(--dark-grey);
+        --color-base-text: var(--white);
+        --theme-name: "dark";
+    }
+}
+  
+  body {
+    background-color: var(--color-base-bg);
+    color: var(--color-base-text);
+    padding: 10px;
+  }
+  
+  .theme-name::after {
+    content: var(--theme-name);
+  }
 
 /*Default CSS Custom Variables*/
 :root {
