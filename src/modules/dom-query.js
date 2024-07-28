@@ -18,6 +18,7 @@ let completedFolder = document.querySelector('.completed');
 let projectFoldersContainer = document.querySelector('.project-folders-container');
 let myProjectsText = document.querySelector('.my-projects');
 let themeSelectorContainer = document.querySelector('.theme-selector-container');
+let themeSlider = document.querySelector('#checkbox');
 let contentContainer = document.querySelector('.content-container');
 
 export {
@@ -41,5 +42,6 @@ export {
     projectFoldersContainer,
     myProjectsText,
     themeSelectorContainer,
+    themeSlider,
     contentContainer
 }

@@ -36,7 +36,8 @@ textarea:focus, input:focus {
 }
 
 /*Dark and Light Themes by System Preference*/
-:root {
+:root,
+:root.light {
     --color-base-bg: var(--white);
     --color-base-text: var(--dark-grey);
     --theme-name: "light";
@@ -48,6 +49,12 @@ textarea:focus, input:focus {
         --color-base-text: var(--white);
         --theme-name: "dark";
     }
+}
+
+:root.dark {
+    --color-base-bg: var(--dark-grey);
+    --color-base-text: var(--white);
+    --theme-name: "dark";
 }
   
   body {
@@ -100,10 +107,10 @@ textarea:focus, input:focus {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 30px;
-    width: 50px;
-    background-color: var(--white);
-    border: 5px solid black;
+    height: 26px;
+    width: 46px;
+    background-color: var(--color-base-bg);
+    border: 3px solid black;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -121,11 +128,11 @@ textarea:focus, input:focus {
   }
   
   input:checked + .slider {
-    background-color: var(--dark-grey);
+    background-color: var(--color-base-bg);
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px var(--dark-grey);
+    box-shadow: 0 0 1px var(--color-base-bg);
   }
   
   input:checked + .slider:before {
