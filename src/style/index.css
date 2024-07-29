@@ -77,6 +77,7 @@ textarea:focus, input:focus {
     --default-line-height: 1.65;
     --default-font-family: 'Nimbus Mono PS', 'Courier New', monospace;
     --dark-grey: #1b1b1b;
+    --mid-gray: #2b2b2b;
     --light-grey: #80868B;
     --blue: #4285F4;
     --white: whitesmoke;
@@ -155,6 +156,7 @@ textarea:focus, input:focus {
 
   nav {
     height: 100svh;
+    background-color: var(--mid-gray);
     overflow: hidden;
     position: relative;
     display: flex;
