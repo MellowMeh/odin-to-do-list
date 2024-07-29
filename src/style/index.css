@@ -312,7 +312,7 @@ main {
     display: flex;
     width: 260px;
     height: auto;
-    background-color: var(--color-base-bg);
+    background-color: var(--color-nav-bg);
     border: 1px var(--color-accent-bg) solid;
     color: var(--color-base-text);
     border-radius: 10px;
