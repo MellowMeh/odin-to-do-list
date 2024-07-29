@@ -82,12 +82,7 @@ textarea:focus, input:focus {
     --white: whitesmoke;
 }
 
-/*Webpage Specific Rules*/
-
-
-
 /*Theme Select Slider*/
-/* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
@@ -95,14 +90,12 @@ textarea:focus, input:focus {
     height: 34px;
   }
   
-  /* Hide default HTML checkbox */
   .switch input {
     opacity: 0;
     width: 0;
     height: 0;
   }
   
-  /* The slider */
   .slider {
     position: absolute;
     cursor: pointer;
@@ -144,7 +137,6 @@ textarea:focus, input:focus {
     transform: translateX(20px);
   }
   
-  /* Rounded sliders */
   .slider.round {
     border-radius: 34px;
   }
@@ -152,3 +144,39 @@ textarea:focus, input:focus {
   .slider.round:before {
     border-radius: 50%;
   }
+
+  /*Webpage Specific Rules*/
+  body {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  nav {
+    height: 100svh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-container {
+    height: 6svh;
+  }
+
+  .add-task-container,
+  .inbox,
+  .today,
+  .upcoming,
+  .priority,
+  .completed,
+  .my-projects {
+    height: 4svh;
+  }
+
+  .theme-selector-container {
+    position: absolute;
+    bottom: 1svh;
+  }
+
