@@ -6,6 +6,7 @@
     border: none;
     list-style-type: none;
     font-family: var(--default-font-family);
+    font-size: calc(var(--default-size)*0.32);
     font-weight: 200;
 }
 
@@ -190,8 +191,10 @@ textarea:focus, input:focus {
 }
 
 .user-name,
-.add-task {
+.add-task,
+.my-projects {
     font-weight: 400;
+    font-size: calc(var(--default-size)*0.30);
 }
 
 .icon-container{
