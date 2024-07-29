@@ -213,14 +213,18 @@ textarea:focus, input:focus {
   }
 
   .add-task-container,
-  .inbox,
-  .today,
-  .upcoming,
-  .priority,
-  .completed,
+  .inbox-container,
+  .today-container,
+  .upcoming-container,
+  .priority-container,
+  .completed-container,
   .my-projects {
     height: 4svh;
     padding-left: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: capitalize;
   }
 
   .theme-selector-container {
