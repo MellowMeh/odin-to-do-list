@@ -1,8 +1,8 @@
 /*CSS Reset*/
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     border: none;
     list-style-type: none;
 }
@@ -39,6 +39,7 @@ textarea:focus, input:focus {
 :root,
 :root.light {
     --color-base-bg: var(--white);
+    --color-nav-bg: var(--off-white);
     --color-accent-bg: var(--dark-grey);
     --color-base-text: var(--dark-grey);
     --theme-name: "light";
@@ -47,6 +48,7 @@ textarea:focus, input:focus {
 @media (prefers-color-scheme: dark) {
     :root {
         --color-base-bg: var(--dark-grey);
+        --color-nav-bg: var(--mid-gray);
         --color-accent-bg: var(--white);
         --color-base-text: var(--white);
         --theme-name: "dark";
@@ -55,6 +57,7 @@ textarea:focus, input:focus {
 
 :root.dark {
     --color-base-bg: var(--dark-grey);
+    --color-nav-bg: var(--mid-gray);
     --color-accent-bg: var(--white);
     --color-base-text: var(--white);
     --theme-name: "dark";
@@ -80,7 +83,8 @@ textarea:focus, input:focus {
     --mid-gray: #2b2b2b;
     --light-grey: #80868B;
     --blue: #4285F4;
-    --white: whitesmoke;
+    --white: #F7F9F9;
+    --off-white: whitesmoke;
 }
 
 /*Theme Select Slider*/
@@ -152,11 +156,12 @@ textarea:focus, input:focus {
     grid-template-columns: 280px 1fr;
     overflow-y: hidden;
     overflow-x: hidden;
+    padding: 0px;
   }
 
   nav {
     height: 100svh;
-    background-color: var(--mid-gray);
+    background-color: var(--color-nav-bg);
     overflow: hidden;
     position: relative;
     display: flex;
@@ -179,6 +184,7 @@ textarea:focus, input:focus {
 
   .theme-selector-container {
     position: absolute;
-    bottom: 1svh;
+    left: 5px;
+    bottom: 0px;
   }
 
