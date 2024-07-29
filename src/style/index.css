@@ -169,6 +169,7 @@ textarea:focus, input:focus {
   nav {
     height: 100svh;
     background-color: var(--color-nav-bg);
+    font-size: calc(3.25rem*0.32);
     overflow: hidden;
     position: relative;
     display: flex;
@@ -191,14 +192,15 @@ textarea:focus, input:focus {
 }
 
 .user-name {
-    margin: 0px 6px;
+    margin-left: 10px;
+    margin-right: 4px;
 }
 
 .user-name,
 .add-task,
 .my-projects {
-    font-weight: 400;
-    font-size: calc(var(--default-size)*0.30);
+    font-weight: 500;
+    font-size: calc(3.25rem*0.28);
 }
 
 .icon-container{
@@ -229,6 +231,14 @@ textarea:focus, input:focus {
     gap: 8px;
     text-transform: capitalize;
   }
+
+.inbox,
+.today,
+.upcoming,
+.priority,
+.completed {
+    font-size: calc(3.25rem*0.28);
+}  
 
   .theme-selector-container {
     position: absolute;
