@@ -170,24 +170,33 @@ textarea:focus, input:focus {
     position: relative;
     display: flex;
     flex-direction: column;
+    padding-left: 10px;
   }
 
   .profile-container {
     height: 6svh;
     display: flex;
+    justify-content: space-between;
     align-items: center;
   }
 
 .user-container {
     display: flex;
     align-items: center;
-    width: 60%;
     gap: 5px;
 }
 
+.icon-container{
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
   .profile-icon-background {
-    height: 32px;
-    width: 32px;
+    height: 28px;
+    width: 28px;
     background-color: var(--blue);
     border-radius: 34px;
   }
@@ -200,6 +209,7 @@ textarea:focus, input:focus {
   .completed,
   .my-projects {
     height: 4svh;
+    padding-left: 12px;
   }
 
   .theme-selector-container {
