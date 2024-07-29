@@ -21,6 +21,10 @@ img {
     height: auto;
 }
 
+svg {
+    color: var(--color-base-text)
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -170,6 +174,22 @@ textarea:focus, input:focus {
 
   .profile-container {
     height: 6svh;
+    display: flex;
+    align-items: center;
+  }
+
+.user-container {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    gap: 5px;
+}
+
+  .profile-icon-background {
+    height: 32px;
+    width: 32px;
+    background-color: var(--blue);
+    border-radius: 34px;
   }
 
   .add-task-container,
