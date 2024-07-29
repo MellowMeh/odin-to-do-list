@@ -257,17 +257,17 @@ main {
     padding: 4px 30px;
 }
 
+.content-container {
+    padding: 4px 30px;
+}
+
+/*DOM Elements*/
 .content-header {
     font-size: calc(var(--default-size)*0.55);
     font-weight: 500;
     text-transform: capitalize;
 }
 
-.content-container {
-    padding: 4px 30px;
-}
-
-/*DOM Elements*/
 .nav-project-list {
     height: 4svh;
     display: flex;
@@ -276,3 +276,8 @@ main {
     text-transform: capitalize;
     margin-left: 10px;
   }
+
+  .task-card {
+    
+  }
+
