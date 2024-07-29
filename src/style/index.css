@@ -6,7 +6,6 @@
     border: none;
     list-style-type: none;
     font-family: var(--default-font-family);
-    font-size: calc(var(--default-size)*0.32);
     font-weight: 200;
 }
 
@@ -157,7 +156,7 @@ textarea:focus, input:focus {
     border-radius: 50%;
   }
 
-  /*Static Elements Rules*/
+/*Static Elements Rules*/
   body {
     display: grid;
     grid-template-columns: 280px 1fr;
@@ -248,7 +247,7 @@ textarea:focus, input:focus {
 
 main {
     display: grid;
-    grid-template-rows: 10svh 1fr;
+    grid-template-rows: 93px 1fr;
 }
 
 .content-header-container {
@@ -263,7 +262,7 @@ main {
 
 /*DOM Elements*/
 .content-header {
-    font-size: calc(var(--default-size)*0.55);
+    font-size: calc(3.25rem*0.55);
     font-weight: 500;
     text-transform: capitalize;
 }
