@@ -262,6 +262,7 @@ main {
 
 /*DOM Elements*/
 .content-header {
+    color: var(--off-white);
     font-size: calc(3.25rem*0.55);
     font-weight: 500;
     text-transform: capitalize;
@@ -278,6 +279,29 @@ main {
   }
 
   .task-card {
-
+    position: relative;
+    display: flex;
+    width: 260px;
+    height: auto;
+    background-color: var(--mid-gray);
+    border: 1px var(--light-gray) solid;
+    color: var(--off-white);
+    border-radius: 10px;
+    padding: 10px;
+    gap: 5px;
+    margin-bottom: 15px;
   }
 
+  .task-text {
+    max-inline-size: 22ch;
+  }
+
+  .task-tags {
+    display: flex;
+  }
+
+  .task-options {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+  }
