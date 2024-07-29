@@ -184,7 +184,7 @@ textarea:focus, input:focus {
 .user-container {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 7px;
 }
 
 .icon-container{
