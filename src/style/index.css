@@ -39,6 +39,7 @@ textarea:focus, input:focus {
 :root,
 :root.light {
     --color-base-bg: var(--white);
+    --color-accent-bg: var(--dark-grey);
     --color-base-text: var(--dark-grey);
     --theme-name: "light";
   }
@@ -46,6 +47,7 @@ textarea:focus, input:focus {
 @media (prefers-color-scheme: dark) {
     :root {
         --color-base-bg: var(--dark-grey);
+        --color-accent-bg: var(--white);
         --color-base-text: var(--white);
         --theme-name: "dark";
     }
@@ -53,6 +55,7 @@ textarea:focus, input:focus {
 
 :root.dark {
     --color-base-bg: var(--dark-grey);
+    --color-accent-bg: var(--white);
     --color-base-text: var(--white);
     --theme-name: "dark";
 }
@@ -109,7 +112,7 @@ textarea:focus, input:focus {
     bottom: 0;
     height: 26px;
     width: 46px;
-    background-color: var(--color-base-bg);
+    background-color: var(--color-accent-bg);
     border: 3px solid black;
     -webkit-transition: .4s;
     transition: .4s;
@@ -128,11 +131,11 @@ textarea:focus, input:focus {
   }
   
   input:checked + .slider {
-    background-color: var(--color-base-bg);
+    background-color: var(--color-accent-bg);
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px var(--color-base-bg);
+    background-color: var(--color-accent-bg);
   }
   
   input:checked + .slider:before {
