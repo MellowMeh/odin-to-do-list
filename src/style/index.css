@@ -283,9 +283,9 @@ main {
     display: flex;
     width: 260px;
     height: auto;
-    background-color: var(--mid-gray);
-    border: 1px var(--light-gray) solid;
-    color: var(--off-white);
+    background-color: var(--color-base-bg);
+    border: 1px var(--color-accent-bg) solid;
+    color: var(--color-base-text);
     border-radius: 10px;
     padding: 10px;
     gap: 5px;
@@ -294,10 +294,12 @@ main {
 
   .task-text {
     max-inline-size: 22ch;
+    margin-bottom: 10px;
   }
 
   .task-tags {
     display: flex;
+    gap: 10px;
   }
 
   .task-options {
