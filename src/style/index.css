@@ -178,7 +178,7 @@ textarea:focus, input:focus {
   }
 
   .profile-container {
-    height: 6svh;
+    height: 58px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -225,7 +225,7 @@ textarea:focus, input:focus {
   .priority-container,
   .completed-container,
   .my-projects {
-    height: 4svh;
+    height: 39px;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -269,15 +269,16 @@ main {
 }
 
 .nav-project-list {
-    height: 4svh;
+    height: 39px;
     display: flex;
     align-items: center;
     gap: 8px;
+    font-size: calc(3.25rem*0.28);
     text-transform: capitalize;
     margin-left: 10px;
   }
 
   .task-card {
-    
+
   }
 
