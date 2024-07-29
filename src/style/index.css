@@ -56,8 +56,8 @@ textarea:focus, input:focus {
     :root {
         --color-base-bg: var(--dark-grey);
         --color-nav-bg: var(--mid-gray);
-        --color-accent-bg: var(--white);
-        --color-base-text: var(--white);
+        --color-accent-bg: var(--off-white);
+        --color-base-text: var(--off-white);
         --theme-name: "dark";
     }
 }
@@ -65,8 +65,8 @@ textarea:focus, input:focus {
 :root.dark {
     --color-base-bg: var(--dark-grey);
     --color-nav-bg: var(--mid-gray);
-    --color-accent-bg: var(--white);
-    --color-base-text: var(--white);
+    --color-accent-bg: var(--off-white);
+    --color-base-text: var(--off-white);
     --theme-name: "dark";
 }
   
@@ -173,7 +173,7 @@ textarea:focus, input:focus {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
+    padding-left: 18px;
   }
 
   .profile-container {
@@ -186,8 +186,12 @@ textarea:focus, input:focus {
 
 .user-container {
     display: flex;
+    justify-content: start;
     align-items: center;
-    gap: 7px;
+}
+
+.user-name {
+    margin: 0px 6px;
 }
 
 .user-name,
@@ -206,8 +210,8 @@ textarea:focus, input:focus {
 
 
   .profile-icon-background {
-    height: 28px;
-    width: 28px;
+    height: 26px;
+    width: 26px;
     background-color: var(--blue);
     border-radius: 34px;
   }
@@ -220,7 +224,6 @@ textarea:focus, input:focus {
   .completed-container,
   .my-projects {
     height: 4svh;
-    padding-left: 12px;
     display: flex;
     align-items: center;
     gap: 8px;
