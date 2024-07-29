@@ -5,6 +5,8 @@
     padding: 0px;
     border: none;
     list-style-type: none;
+    font-family: var(--default-font-family);
+    font-weight: 200;
 }
 
 :root {
@@ -82,7 +84,7 @@ textarea:focus, input:focus {
     --default-size: clamp(2.25rem, 2vw + 1.5rem, 3.25rem);
     --default-max-inline-size: 66ch;
     --default-line-height: 1.65;
-    --default-font-family: 'Nimbus Mono PS', 'Courier New', monospace;
+    --default-font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
     --dark-grey: #1b1b1b;
     --mid-gray: #2b2b2b;
     --light-grey: #80868B;
@@ -185,6 +187,11 @@ textarea:focus, input:focus {
     display: flex;
     align-items: center;
     gap: 7px;
+}
+
+.user-name,
+.add-task {
+    font-weight: 400;
 }
 
 .icon-container{
