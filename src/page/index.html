@@ -64,24 +64,29 @@
     <main>
         <div class="add-task-pop-up-container">
             <div class="add-task-pop-up-top">
-                <input type="text" placeholder="task name">
-                <input type="text" placeholder="description">
-                <input type="date" placeholder="due date">
-                <select id="priority">
-                    <option value="" disabled selected>priority</option>
-                    <option value="high">high</option>
-                    <option value="medium">medium</option>
-                    <option value="low">low</option>
-                </select>
+                <input class="add-task-pop-up-input" id="task-name-input" type="text" placeholder="task name">
+                <input class="add-task-pop-up-input"  id="description-input" type="text" placeholder="description">
+                <div class="date-priority-container">
+                    <input class="add-task-pop-up-input" id="due-date-input" type="date" placeholder="due date">
+                    <select class="add-task-pop-up-input" id="priority-input">
+                        <option value="" disabled selected>priority</option>
+                        <option value="high">high</option>
+                        <option value="medium">medium</option>
+                        <option value="low">low</option>
+                    </select>
+                </div>
             </div>
             <div class="add-task-pop-up-bottom">
-                <select id="project">
+                <select class="add-task-pop-up-input" id="project-input">
                     <option value="" disabled selected>project</option>
                     <option value="example 1">example 1</option>    
                     <option value="example 2">example 2</option>
                     <option value="example 3">example 2</option>
                 </select>
-
+                <div class="add-task-pop-up-button-container">
+                    <button id="cancel-button">cancel</button>
+                    <button id="add-task-button">add task</button>
+                </div>
             </div>
         </div>
 

@@ -31,6 +31,7 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+  padding: 0;
 }
 
 input[type=number] {
@@ -412,17 +413,90 @@ main {
   position: absolute;
   display: grid;
   grid-template-columns: minmax(350px, 550px);
-  grid-template-rows: 125px 75px;
-  height: 200px;
+  grid-template-rows: 105px 65px;
+  height: 190px;
   background-color: var(--color-nav-bg);
   border: 1px solid var(--color-accent-bg);
   border-radius: 10px;
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 15px 20px;
   z-index: 1111;
 }
 
 .add-task-pop-up-top {
-  border-bottom: 1px solid var(--color-accent-bg)
+  border-bottom: 1px solid var(--color-accent-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.add-task-pop-up-input {
+  background-color: var(--color-nav-bg);
+  color: var(--color-base-text);
+}
+
+#task-name-input {
+  font-size: 25px;
+  text-transform: capitalize;
+}
+
+#description-input {
+  font-size: 14px;
+  text-transform: capitalize;
+  height: 20px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.date-priority-container {
+  display: flex;
+  gap: 10px;
+}
+
+#due-date-input,
+#priority-input {
+  border: 1px solid var(--color-accent-bg);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#priority-input {
+  text-transform: capitalize;
+}
+
+.add-task-pop-up-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#project-input,
+#cancel-button,
+#add-task-button {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  height: 32px;
+}
+
+.add-task-pop-up-button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+#cancel-button {
+  background-color: var(--color-hover);
+  color: var(--white);
+  width: 90px;
+  border-radius: 10px;
+}
+
+#add-task-button {
+  background-color: var(--blue);
+  color: var(--white);
+  width: 90px;
+  border-radius: 10px;
 }
