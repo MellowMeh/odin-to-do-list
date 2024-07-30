@@ -290,6 +290,8 @@ main {
 
 .content-container {
     padding: 4px 30px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 /*DOM Elements*/
