@@ -326,7 +326,7 @@ main {
     margin-bottom: 20px;
 }
 
-.add-section-container {
+.add-section-container{
     display: flex;
     align-items: center;
     margin-top: 12px;
@@ -499,4 +499,25 @@ main {
   color: var(--white);
   width: 90px;
   border-radius: 10px;
+}
+
+.add-section-pop-up-container{
+  background-color: var(--color-base-bg);
+  margin-top: 20px;
+  width: 260px;
+  height: 80px;
+}
+
+#section-name-input {
+  background-color: var(--color-base-bg);
+  color: var(--color-accent-bg);
+  font-size: calc(3.25rem*0.30);
+  font-weight: 400;
+  width: 260px;
+  height: 35px;
+  padding-left: 5px;
+  border: 1px solid var(--color-accent-bg);
+  border-radius: 5px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
 }
