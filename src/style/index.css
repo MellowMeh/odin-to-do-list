@@ -203,6 +203,11 @@ textarea:focus, input:focus {
 .my-projects {
     font-weight: 500;
     font-size: calc(3.25rem*0.28);
+    color:
+}
+
+.add-task {
+    color: var(--blue);
 }
 
 .icon-container{
