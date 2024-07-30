@@ -88,12 +88,12 @@ textarea:focus, input:focus {
     --default-max-inline-size: 66ch;
     --default-line-height: 1.65;
     --default-font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-    --dark-grey: #1b1b1b;
-    --mid-gray: #2b2b2b;
-    --light-grey: #80868B;
+    --dark-grey: #18191a;
+    --mid-gray: #242526;
+    --light-grey: #3a3b3c;
     --blue: #4285F4;
-    --white: #F7F9F9;
-    --off-white: whitesmoke;
+    --white: #e4e6eb;
+    --off-white: #b0b3b8;
 }
 
 /*Theme Select Slider*/
