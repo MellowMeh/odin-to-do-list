@@ -221,7 +221,6 @@ textarea:focus, input:focus {
   }
 
   .add-task-container,
-  .add-section-container,
   .inbox-container,
   .today-container,
   .upcoming-container,
@@ -238,7 +237,6 @@ textarea:focus, input:focus {
   #notification-icon:hover,
   #collapse-sidebar-icon:hover,
   .add-task-container:hover,
-  .add-section-container:hover,
   .inbox-container:hover,
   .today-container:hover,
   .upcoming-container:hover,
@@ -255,7 +253,6 @@ textarea:focus, input:focus {
   }
 
   .add-task-container:hover,
-  .add-section-container:hover,
   .inbox-container:hover,
   .today-container:hover,
   .upcoming-container:hover,
@@ -321,7 +318,53 @@ main {
     font-weight: 500;
     text-transform: capitalize;
     margin-top: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.add-section-container {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    width: 260px;
+    height: 40px;
+    background-color: var(--color-nav-bg);
+    border-radius: 10px;
+    gap: 5px;
+}
+
+.add-section {
+    color: var(--light-grey);
+    font-size: calc(3.25rem*0.30);
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 2px;
+}
+
+.add-section:hover {
+    color: var(--blue);
+}
+
+.main-add-task-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 15px;
+    gap: 5px;
+}
+
+.main-add-task {
+    width: 100%;
+    color: var(--light-grey);
+    font-size: calc(3.25rem*0.28);
+    font-weight: 200;
+    text-transform: capitalize;
+    margin-bottom: 3px;
+}
+
+.main-add-task:hover {
+    color: var(--blue);
 }
 
   .task-card {
