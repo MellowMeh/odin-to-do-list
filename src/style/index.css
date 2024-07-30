@@ -57,7 +57,7 @@ textarea:focus, input:focus {
         --color-base-bg: var(--dark-grey);
         --color-nav-bg: var(--mid-gray);
         --color-accent-bg: var(--off-white);
-        --color-base-text: var(--off-white);
+        --color-base-text: var(--white);
         --color-hover: rgba(294, 186, 105, 0.05);
         --theme-name: "dark";
     }
@@ -67,7 +67,7 @@ textarea:focus, input:focus {
     --color-base-bg: var(--dark-grey);
     --color-nav-bg: var(--mid-gray);
     --color-accent-bg: var(--off-white);
-    --color-base-text: var(--off-white);
+    --color-base-text: var(--white);
     --color-hover: rgba(294, 186, 105, 0.05);
     --theme-name: "dark";
 }
@@ -220,7 +220,7 @@ textarea:focus, input:focus {
   .profile-icon-background {
     height: 26px;
     width: 26px;
-    background-color: var(--blue);
+    background-color: var(--light-grey);
     border-radius: 34px;
   }
 
@@ -339,7 +339,7 @@ main {
 }
 
 .add-section {
-    color: var(--light-grey);
+    color: var(--off-white);
     font-size: calc(3.25rem*0.28);
     font-weight: 200;
     width: 230px;
@@ -362,7 +362,7 @@ main {
 
 .main-add-task {
     width: 100%;
-    color: var(--light-grey);
+    color: var(--off-white);
     font-size: calc(3.25rem*0.28);
     font-weight: 200;
     text-transform: capitalize;
