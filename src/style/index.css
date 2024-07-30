@@ -248,7 +248,10 @@ textarea:focus, input:focus {
     border-radius: 10px;
   }
 
-  .user-container:hover,
+  .user-container:hover {
+    width: 120px;
+  }
+
   .add-task-container:hover,
   .inbox-container:hover,
   .today-container:hover,
@@ -257,7 +260,7 @@ textarea:focus, input:focus {
   .completed-container:hover,
   .my-projects:hover,
   .nav-project-list:hover {
-    margin-right: 15px;
+    width: 240px;
   }
 
 .inbox,
