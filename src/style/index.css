@@ -221,6 +221,7 @@ textarea:focus, input:focus {
   }
 
   .add-task-container,
+  .add-section-container,
   .inbox-container,
   .today-container,
   .upcoming-container,
@@ -237,6 +238,7 @@ textarea:focus, input:focus {
   #notification-icon:hover,
   #collapse-sidebar-icon:hover,
   .add-task-container:hover,
+  .add-section-container:hover,
   .inbox-container:hover,
   .today-container:hover,
   .upcoming-container:hover,
@@ -253,6 +255,7 @@ textarea:focus, input:focus {
   }
 
   .add-task-container:hover,
+  .add-section-container:hover,
   .inbox-container:hover,
   .today-container:hover,
   .upcoming-container:hover,
