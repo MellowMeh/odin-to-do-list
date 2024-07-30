@@ -531,3 +531,23 @@ main {
   border-radius: 5px;
   margin-bottom: 10px;
 }
+
+.add-project-pop-up-container{
+  background-color: var(--color-nav-bg);
+  margin-left: 10px;
+  width: 220px;
+  height: 80px;
+}
+
+#project-name-input {
+  background-color: var(--color-nav-bg);
+  color: var(--color-accent-bg);
+  font-size: calc(3.25rem*0.30);
+  font-weight: 400;
+  width: 220px;
+  height: 35px;
+  padding-left: 5px;
+  border: 1px solid var(--color-accent-bg);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
