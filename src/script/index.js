@@ -1,6 +1,6 @@
 import '../style/index.css';
 import { toggleDarkMode, changeDisplayedTheme } from '../modules/theme-toggle';
-import { storageAvailable } from '../modules/detectLocalStorage';
+import { storageAvailable } from '../modules/detect-local-storage';
 
 toggleDarkMode();
 changeDisplayedTheme();
