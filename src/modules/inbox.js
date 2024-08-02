@@ -1,4 +1,4 @@
-import { sectionOne, taskCardsContainer } from "./dom-query";
+import { taskCardsContainer } from "./dom-query";
 import { getAllTasks } from "./get-all-tasks"
 
 let generateInbox = () => {
