@@ -1,20 +1,20 @@
 import { getAllTasks } from "./get-all-tasks";
 
-let updateTasks = () => {
+let updateTasks = (taskToUpdate) => {
     const tasks = getAllTasks();
-    const existingTask = tasks.find(task => task.id == taskToSave.id);
+    const existingTask = tasks.find(task => task.id == taskToUpdate.id);
 
     if (existingTask) {
-        existingTask.title = taskToSave.title,
-        existingTask.description = taskToSave.description,
-        existingTask.dueDate = taskToSave.dueDate,
-        existingTask.priority = taskToSave.priority,
-        existingTask.project = taskToSave.project,
-        existingTask.section = taskToSave.section,
-        existingTask.id = taskToSave.id
+        existingTask.title = taskToUpdate.title,
+        existingTask.description = taskToUpdate.description,
+        existingTask.dueDate = taskToUpdate.dueDate,
+        existingTask.priority = taskToUpdate.priority,
+        existingTask.project = taskToUpdate.project,
+        existingTask.section = taskToUpdate.section,
+        existingTask.id = taskToUpdate.id
     } else {
-        taskToSave.id = Math.floor(Math.random() * 1000000);
-        tasks.push(taskToSave);
+        taskToUpdate.id = Math.floor(Math.random() * 100);
+        tasks.push(taskToUpdate);
     }
 
     localStorage.setItem('todoapp-tasks', JSON.stringify(tasks));
