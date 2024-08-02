@@ -1,4 +1,12 @@
-import { contentContainer, popUpContainer } from "./dom-query";
+import { popUpContainer } from "./dom-query";
+import { taskCreator } from "./create-task";
+import { updateTasks } from "./update-tasks";
+
+let taskNameInput;
+let descriptionInput;
+let dueDateInput;
+let priorityInput;
+let projectInput;
 
 let generateAddTaskPopUp = () => {
     let addTaskPopUpContainer = document.createElement('div');
@@ -9,14 +17,14 @@ let generateAddTaskPopUp = () => {
     addTaskPopUpTop.setAttribute('class', 'add-task-pop-up-top');
     addTaskPopUpContainer.appendChild(addTaskPopUpTop);
 
-    let taskNameInput = document.createElement('input');
+    taskNameInput = document.createElement('input');
     taskNameInput.setAttribute('class', 'add-task-pop-up-input');
     taskNameInput.setAttribute('id', 'task-name-input');
     taskNameInput.setAttribute('type', 'text');
     taskNameInput.setAttribute('placeholder', 'task name');
     addTaskPopUpTop.appendChild(taskNameInput);
 
-    let descriptionInput = document.createElement('input');
+    descriptionInput = document.createElement('input');
     descriptionInput.setAttribute('class', 'add-task-pop-up-input');
     descriptionInput.setAttribute('id', 'description-input');
     descriptionInput.setAttribute('type', 'text');
@@ -27,14 +35,14 @@ let generateAddTaskPopUp = () => {
     datePriorityContainer.setAttribute('class', 'date-priority-container');
     addTaskPopUpTop.appendChild(datePriorityContainer);
 
-    let dueDateInput = document.createElement('input');
+    dueDateInput = document.createElement('input');
     dueDateInput.setAttribute('class', 'add-task-pop-up-input');
     dueDateInput.setAttribute('id', 'due-date-input');
     dueDateInput.setAttribute('type', 'date');
     dueDateInput.setAttribute('placeholder', 'due date');
     datePriorityContainer.appendChild(dueDateInput);
 
-    let priorityInput = document.createElement('select');
+    priorityInput = document.createElement('select');
     priorityInput.setAttribute('class', 'add-task-pop-up-input');
     priorityInput.setAttribute('id', 'priority-input');
         let priorityPlaceholder = document.createElement('option');
@@ -65,7 +73,7 @@ let generateAddTaskPopUp = () => {
     addTaskPopUpBottom.setAttribute('class', 'add-task-pop-up-bottom');
     addTaskPopUpContainer.appendChild(addTaskPopUpBottom);
 
-    let projectInput = document.createElement('select');
+    projectInput = document.createElement('select');
     projectInput.setAttribute('class', 'add-task-pop-up-input');
     projectInput.setAttribute('id', 'project-input');
         let projectPlaceholder = document.createElement('option');
@@ -89,10 +97,10 @@ let generateAddTaskPopUp = () => {
     let addTaskButton = document.createElement('button');
         addTaskButton.setAttribute('id', 'add-task-button');
         addTaskButton.textContent = 'add task';
+        addTaskButton.addEventListener('click', captureAddTaskPopUpInformation);
         addTaskPopUpButtonContainer.appendChild(addTaskButton);
 
     addTaskPopUpBottom.appendChild(addTaskPopUpButtonContainer);
-
 };
 
 let closeAddTaskPopUp = () => {
@@ -101,4 +109,9 @@ let closeAddTaskPopUp = () => {
     };
 }
 
+let captureAddTaskPopUpInformation = () => {
+   let userInput = taskCreator(taskNameInput.value, descriptionInput.value, dueDateInput.value, priorityInput.value, projectInput.value)
+   updateTasks(userInput);
+   closeAddTaskPopUp();
+};
 export {generateAddTaskPopUp, closeAddTaskPopUp};
