@@ -1,6 +1,6 @@
 import { contentContainer } from "./dom-query";
 
-let apiAddTask = () => {
+let generateAddTaskPopUp = () => {
     let addTaskPopUpContainer = document.createElement('div');
     addTaskPopUpContainer.setAttribute('class', 'add-task-pop-up-container');
     contentContainer.appendChild(addTaskPopUpContainer);
@@ -94,4 +94,4 @@ let apiAddTask = () => {
 
 };
 
-export {apiAddTask};
+export {generateAddTaskPopUp};

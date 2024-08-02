@@ -5,12 +5,12 @@ import {getAllTasks} from '../modules/get-all-tasks';
 import { updateTasks } from '../modules/update-tasks';
 import { deleteTask } from '../modules/delete-task';
 import { taskCreator } from '../modules/create-task';
-import { addTaskButton, addTaskContainer } from '../modules/dom-query';
-import { apiAddTask } from '../modules/api-add-task';
+import { addTaskContainer } from '../modules/dom-query';
+import { generateAddTaskPopUp } from '../modules/api-add-task';
 
 
 toggleDarkMode();
 changeDisplayedTheme();
 storageAvailable();
 
-addTaskContainer.addEventListener('click', apiAddTask);
+addTaskContainer.addEventListener('click', generateAddTaskPopUp);
