@@ -5,15 +5,12 @@ import {getAllTasks} from '../modules/get-all-tasks';
 import { updateTasks } from '../modules/update-tasks';
 import { deleteTask } from '../modules/delete-task';
 import { taskCreator } from '../modules/create-task';
+import { addTaskButton } from '../modules/dom-query';
+import { apiAddTask } from '../modules/api-add-task';
 
 
 toggleDarkMode();
 changeDisplayedTheme();
 storageAvailable();
 
-const example = taskCreator('manually updated', 'description', 'due date', 'priority', 'project', 'section', '61');
-
-updateTasks(example);
-
-
-console.table(getAllTasks());
+addTaskButton.addEventListener('click', apiAddTask);
