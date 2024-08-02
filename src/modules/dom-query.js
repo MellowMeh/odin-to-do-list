@@ -23,6 +23,7 @@ let contentContainer = document.querySelector('.content-container');
 let popUpContainer = document.querySelector('.pop-up-container');
 let sectionOne = document.querySelector('.section-one');
 let mainAddTaskContainer = document.querySelector('.main-add-task-container');
+let taskCardsContainer = document.querySelector('.task-cards-container');
 
 export {
     sidebarContainer,
@@ -49,5 +50,6 @@ export {
     contentContainer, 
     popUpContainer,
     sectionOne,
-    mainAddTaskContainer
+    mainAddTaskContainer,
+    taskCardsContainer
 }

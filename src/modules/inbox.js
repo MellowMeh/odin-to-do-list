@@ -1,4 +1,4 @@
-import { sectionOne } from "./dom-query";
+import { sectionOne, taskCardsContainer } from "./dom-query";
 import { getAllTasks } from "./get-all-tasks"
 
 let generateInbox = () => {
@@ -47,7 +47,7 @@ let generateInbox = () => {
         taskOptions.innerHTML = taskOptionsCode;
         taskCard.appendChild(taskOptions);
 
-        sectionOne.appendChild(taskCard);
+        taskCardsContainer.appendChild(taskCard);
     })
 }
 
