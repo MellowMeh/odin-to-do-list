@@ -1,7 +1,7 @@
 let getAllTasks = () => {
-    const notes = JSON.parse(localStorage.getItem('todoapp-tasks') || "[]");
+    const tasks = JSON.parse(localStorage.getItem('todoapp-tasks') || "[]");
 
-    return notes;
+    return tasks;
 }
 
 export {getAllTasks}
