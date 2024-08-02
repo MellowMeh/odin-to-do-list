@@ -20,6 +20,7 @@ let myProjectsText = document.querySelector('.my-projects');
 let themeSelectorContainer = document.querySelector('.theme-selector-container');
 let themeSlider = document.querySelector('#checkbox');
 let contentContainer = document.querySelector('.content-container');
+let popUpContainer = document.querySelector('.pop-up-container');
 
 export {
     sidebarContainer,
@@ -43,5 +44,6 @@ export {
     myProjectsText,
     themeSelectorContainer,
     themeSlider,
-    contentContainer
+    contentContainer, 
+    popUpContainer
 }

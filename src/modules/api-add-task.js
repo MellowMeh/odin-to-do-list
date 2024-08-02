@@ -1,9 +1,9 @@
-import { contentContainer } from "./dom-query";
+import { contentContainer, popUpContainer } from "./dom-query";
 
 let generateAddTaskPopUp = () => {
     let addTaskPopUpContainer = document.createElement('div');
     addTaskPopUpContainer.setAttribute('class', 'add-task-pop-up-container');
-    contentContainer.appendChild(addTaskPopUpContainer);
+    popUpContainer.appendChild(addTaskPopUpContainer);
 
     let addTaskPopUpTop = document.createElement('div');
     addTaskPopUpTop.setAttribute('class', 'add-task-pop-up-top');
@@ -83,6 +83,7 @@ let generateAddTaskPopUp = () => {
     let cancelButton = document.createElement('button');
         cancelButton.setAttribute('id', 'cancel-button');
         cancelButton.textContent = 'cancel';
+        cancelButton.addEventListener('click', closeAddTaskPopUp)
         addTaskPopUpButtonContainer.appendChild(cancelButton);
 
     let addTaskButton = document.createElement('button');
@@ -94,4 +95,10 @@ let generateAddTaskPopUp = () => {
 
 };
 
-export {generateAddTaskPopUp};
+let closeAddTaskPopUp = () => {
+    while (popUpContainer.firstChild) {
+        popUpContainer.removeChild(popUpContainer.firstChild);
+    };
+}
+
+export {generateAddTaskPopUp, closeAddTaskPopUp};
