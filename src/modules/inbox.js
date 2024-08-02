@@ -4,7 +4,6 @@ import { getAllTasks } from "./get-all-tasks"
 let generateInbox = () => {
     let tasks = getAllTasks();
     tasks.forEach((task) => {
-        //console.log(task.title);
         let taskCard = document.createElement('div');
         taskCard.setAttribute('class', 'task-card');
 
