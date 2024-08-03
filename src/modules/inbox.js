@@ -28,6 +28,11 @@ let generateInbox = () => {
             taskText.textContent = (task.title);
             taskTextContainer.appendChild(taskText);
 
+            let taskDescription = document.createElement('div');
+            taskDescription.setAttribute('class', 'task-description');
+            taskDescription.textContent = (task.description);
+            taskTextContainer.appendChild(taskDescription);
+
             let taskTags = document.createElement('div');
             taskTags.setAttribute('class', 'task-tags');
             taskTags.textContent = (task.project);
@@ -46,6 +51,11 @@ let generateInbox = () => {
                 taskProject.setAttribute('class', 'task-project');
                 taskProject.textContent = (task.project);
                 taskTags.appendChild(taskProject);
+
+                let taskPriority = document.createElement('div');
+                taskPriority.setAttribute('class', 'task-project');
+                taskPriority.textContent = (task.priority);
+                taskTags.appendChild(taskPriority);
             taskTextContainer.appendChild(taskTags);
         taskCard.appendChild(taskTextContainer);
 
