@@ -114,4 +114,4 @@ let captureAddTaskPopUpInformation = () => {
    updateTasks(userInput);
    closeAddTaskPopUp();
 };
-export {generateAddTaskPopUp, closeAddTaskPopUp};
+export {generateAddTaskPopUp, closeAddTaskPopUp, captureAddTaskPopUpInformation};
