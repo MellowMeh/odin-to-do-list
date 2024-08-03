@@ -442,6 +442,12 @@ main {
   flex-direction: column;
 }
 
+#delete-task-icon {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
 .add-task-pop-up-input {
   background-color: var(--color-nav-bg);
   color: var(--color-base-text);
