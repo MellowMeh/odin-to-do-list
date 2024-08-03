@@ -2,6 +2,7 @@ import { popUpContainer, sectionOne, taskCardsContainer } from "./dom-query";
 import { generateInbox, selectedObjectDescription, selectedObjectDueDate, selectedObjectId, selectedObjectPriority, selectedObjectProject, selectedObjectTitle } from "./inbox";
 import { closeAddTaskPopUp, captureAddTaskPopUpInformation } from "./add-task-pop-up";
 import { updateTasks } from "./update-tasks";
+import { deleteTask } from "./delete-task";
 
 let taskNameInput;
 let descriptionInput;
@@ -22,6 +23,12 @@ let generateEditTaskPopUp = () => {
     let deleteTaskIcon = document.createElement('div');
     deleteTaskIcon.setAttribute('id', 'delete-task-icon');
     deleteTaskIcon.innerHTML = deleteTaskIconCode;
+    deleteTaskIcon.addEventListener('click', () => {
+        deleteTask(selectedObjectId);
+        removeInboxCards();
+        generateInbox();
+        closeAddTaskPopUp();
+    });
     addTaskPopUpTop.appendChild(deleteTaskIcon);
 
     taskNameInput = document.createElement('input');
