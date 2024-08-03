@@ -1,5 +1,7 @@
+let body = document.querySelector('body');
 let sidebarContainer = document.querySelector('.sidebar-container');
 let nav = document.querySelector('nav');
+let main = document.querySelector('main');
 let profileContainer = document.querySelector('.profile-container');
 let profileIcon = document.querySelector('#profile-icon');
 let userNameDisplay = document.querySelector('.user-name');
@@ -26,8 +28,10 @@ let mainAddTaskContainer = document.querySelector('.main-add-task-container');
 let taskCardsContainer = document.querySelector('.task-cards-container');
 
 export {
+    body, 
     sidebarContainer,
     nav,
+    main,
     profileContainer,
     profileIcon,
     userNameDisplay,
