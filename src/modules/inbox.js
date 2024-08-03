@@ -1,5 +1,13 @@
 import { taskCardsContainer } from "./dom-query";
+import { generateEditTaskPopUp } from "./edit-task-pop-up";
 import { getAllTasks } from "./get-all-tasks"
+
+let selectedObjectTitle;
+let selectedObjectDescription;
+let selectedObjectDueDate;
+let selectedObjectPriority;
+let selectedObjectProject;
+let selectedObjectId;
 
 let generateInbox = () => {
     let tasks = getAllTasks();
@@ -45,6 +53,15 @@ let generateInbox = () => {
         let taskOptions = document.createElement('div');
         taskOptions.setAttribute('class', 'task-options');
         taskOptions.innerHTML = taskOptionsCode;
+        taskOptions.addEventListener('click', () => {
+            selectedObjectTitle = task.title;
+            selectedObjectDescription = task.description;
+            selectedObjectDueDate = task.dueDate;
+            selectedObjectPriority = task.priority;
+            selectedObjectProject = task.project;
+            selectedObjectId = task.id;
+            generateEditTaskPopUp();
+        })
         taskCard.appendChild(taskOptions);
 
         taskCardsContainer.appendChild(taskCard);
@@ -52,5 +69,11 @@ let generateInbox = () => {
 }
 
 export {
-    generateInbox
+    generateInbox, 
+    selectedObjectTitle,
+    selectedObjectDescription,
+    selectedObjectDueDate,
+    selectedObjectPriority,
+    selectedObjectProject,
+    selectedObjectId
 }
