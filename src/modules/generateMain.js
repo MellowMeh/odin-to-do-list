@@ -106,7 +106,7 @@ let generateToday = () => {
     contentHeader.textContent = 'today';
     let tasks = getAllTasks();
     tasks.forEach((task) => {
-        if (task.dueDate === currentDate) {
+        if (task.dueDate === today) {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
