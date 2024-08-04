@@ -1,9 +1,9 @@
 import '../style/index.css';
 import { toggleDarkMode } from '../modules/theme-toggle';
 import { storageAvailable } from '../modules/detect-local-storage';
-import { themeSlider, addTaskContainer, collapseSidebarIcon, mainAddTaskContainer, navAddProjectContainer, inboxFolder, todayFolder, upcomingFolder } from '../modules/dom-query';
+import { themeSlider, addTaskContainer, collapseSidebarIcon, mainAddTaskContainer, navAddProjectContainer, inboxFolder, todayFolder, upcomingFolder, priorityFolder } from '../modules/dom-query';
 import { generateAddTaskPopUp } from '../modules/add-task-pop-up';
-import { generateInbox, generateToday, generateUpcoming } from '../modules/generateMain';
+import { generateInbox, generatePriority, generateToday, generateUpcoming } from '../modules/generateMain';
 import { collapseSidebar, generateExpandSidebarIcon } from '../modules/side-bar';
 
 
@@ -21,3 +21,4 @@ collapseSidebarIcon.addEventListener('click', () => {
 inboxFolder.addEventListener('click', generateInbox);
 todayFolder.addEventListener('click', generateToday);
 upcomingFolder.addEventListener('click', generateUpcoming);
+priorityFolder.addEventListener('click', generatePriority);
