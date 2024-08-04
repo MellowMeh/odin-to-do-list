@@ -576,3 +576,9 @@ main {
   border-radius: 5px;
   margin-bottom: 10px;
 }
+
+.sidebar-icon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}

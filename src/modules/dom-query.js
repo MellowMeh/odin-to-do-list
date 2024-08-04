@@ -26,6 +26,7 @@ let popUpContainer = document.querySelector('.pop-up-container');
 let sectionOne = document.querySelector('.section-one');
 let mainAddTaskContainer = document.querySelector('.main-add-task-container');
 let taskCardsContainer = document.querySelector('.task-cards-container');
+let contentHeader = document.querySelector('.content-header-container');
 
 export {
     body, 
@@ -55,5 +56,6 @@ export {
     popUpContainer,
     sectionOne,
     mainAddTaskContainer,
-    taskCardsContainer
+    taskCardsContainer,
+    contentHeader
 }

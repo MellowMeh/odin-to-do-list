@@ -4,7 +4,7 @@ import { storageAvailable } from '../modules/detect-local-storage';
 import { addTaskContainer, collapseSidebarIcon, mainAddTaskContainer } from '../modules/dom-query';
 import { generateAddTaskPopUp } from '../modules/add-task-pop-up';
 import { generateInbox } from '../modules/inbox';
-import { collapseSidebar } from '../modules/side-bar';
+import { collapseSidebar, generateExpandSidebarIcon } from '../modules/side-bar';
 
 
 toggleDarkMode();
@@ -14,4 +14,8 @@ generateInbox();
 
 addTaskContainer.addEventListener('click', generateAddTaskPopUp);
 mainAddTaskContainer.addEventListener('click', generateAddTaskPopUp);
-collapseSidebarIcon.addEventListener('click', collapseSidebar);
+collapseSidebarIcon.addEventListener('click', () => {
+    collapseSidebar();
+    generateExpandSidebarIcon();
+});
+    
