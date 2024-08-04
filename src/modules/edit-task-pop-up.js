@@ -1,5 +1,5 @@
 import { popUpContainer, sectionOne, taskCardsContainer } from "./dom-query";
-import { generateInbox, selectedObjectDescription, selectedObjectDueDate, selectedObjectId, selectedObjectPriority, selectedObjectProject, selectedObjectTitle } from "./inbox";
+import { generateInbox, selectedObjectDescription, selectedObjectDueDate, selectedObjectId, selectedObjectPriority, selectedObjectProject, selectedObjectTitle } from "./generateMain";
 import { closeAddTaskPopUp, captureAddTaskPopUpInformation } from "./add-task-pop-up";
 import { updateTasks } from "./update-tasks";
 import { deleteTask } from "./delete-task";

@@ -2,7 +2,7 @@ import { popUpContainer } from "./dom-query";
 import { taskCreator } from "./create-task";
 import { updateTasks } from "./update-tasks";
 import { removeInboxCards } from "./edit-task-pop-up";
-import { generateInbox } from "./inbox";
+import { generateInbox } from "./generateMain";
 
 let taskNameInput;
 let descriptionInput;
