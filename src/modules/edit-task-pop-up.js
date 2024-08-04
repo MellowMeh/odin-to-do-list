@@ -1,4 +1,4 @@
-import { popUpContainer, sectionOne, taskCardsContainer } from "./dom-query";
+import { popUpContainer, sectionFive, sectionFour, sectionThree, sectionTwo, taskCardsContainer } from "./dom-query";
 import { generateInbox, selectedObjectDescription, selectedObjectDueDate, selectedObjectId, selectedObjectPriority, selectedObjectProject, selectedObjectTitle } from "./generateMain";
 import { closeAddTaskPopUp, captureAddTaskPopUpInformation } from "./add-task-pop-up";
 import { updateTasks } from "./update-tasks";
@@ -125,6 +125,18 @@ let generateEditTaskPopUp = () => {
 let removeInboxCards = () => {
     while (taskCardsContainer.firstChild) {
         taskCardsContainer.removeChild(taskCardsContainer.firstChild);
+    }
+    while (sectionTwo.firstChild) {
+        sectionTwo.removeChild(sectionTwo.firstChild);
+    }
+    while (sectionThree.firstChild) {
+        sectionThree.removeChild(sectionThree.firstChild);
+    }
+    while (sectionFour.firstChild) {
+        sectionFour.removeChild(sectionFour.firstChild);
+    }
+    while (sectionFive.firstChild) {
+        sectionFive.removeChild(sectionFive.firstChild);
     }
 };
 
