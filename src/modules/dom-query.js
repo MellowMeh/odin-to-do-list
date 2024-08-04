@@ -13,7 +13,7 @@ let plusIcon = document.querySelector('.plus-icon');
 let addTaskButton = document.querySelector('.add-task');
 let taskFoldersContainer = document.querySelector('.task-folders');
 let inboxFolder = document.querySelector('.inbox');
-let todayFolder = document.querySelector('.today');
+let todayFolder = document.querySelector('.today-container');
 let upcomingFolder = document.querySelector('.upcoming');
 let priorityFolder = document.querySelector('.priority');
 let completedFolder = document.querySelector('.completed');
@@ -26,7 +26,7 @@ let popUpContainer = document.querySelector('.pop-up-container');
 let sectionOne = document.querySelector('.section-one');
 let mainAddTaskContainer = document.querySelector('.main-add-task-container');
 let taskCardsContainer = document.querySelector('.task-cards-container');
-let contentHeader = document.querySelector('.content-header-container');
+let contentHeader = document.querySelector('.content-header');
 
 export {
     body, 
