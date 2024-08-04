@@ -18,7 +18,6 @@ let upcomingFolder = document.querySelector('.upcoming');
 let priorityFolder = document.querySelector('.priority');
 let completedFolder = document.querySelector('.completed');
 let projectFoldersContainer = document.querySelector('.project-folders-container');
-let navAddProjectContainer = document.querySelector('.nav-add-project-container');
 let myProjectsText = document.querySelector('.my-projects');
 let themeSelectorContainer = document.querySelector('.theme-selector-container');
 let themeSlider = document.querySelector('.theme-selector-container');
@@ -50,7 +49,6 @@ export {
     priorityFolder,
     completedFolder,
     projectFoldersContainer,
-    navAddProjectContainer,
     myProjectsText,
     themeSelectorContainer,
     themeSlider,
