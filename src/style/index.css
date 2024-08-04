@@ -335,6 +335,19 @@ main {
     margin-bottom: 20px;
 }
 
+.task-card {
+  margin-top: 20px;
+}
+
+.task-cards-container,
+.section-two-task-cards-container,
+.section-three-task-cards-container,
+.section-four-task-cards-container,
+.section-five-task-cards-container {
+  color: var(--color-base-text);
+  margin-top: 20px;
+}
+
 .add-section-container{
     display: flex;
     align-items: center;

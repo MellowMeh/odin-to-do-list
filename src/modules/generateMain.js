@@ -178,6 +178,11 @@ let generateUpcoming = () => {
     console.log('generateUpcoming');
     removeInboxCards();
     contentHeader.textContent = 'upcoming';
+    sectionOne.textContent = 'Tomorrow';
+    sectionTwo.textContent = twoDaysAway;
+    sectionThree.textContent = threeDaysAway;
+    sectionFour.textContent = fourDaysAway;
+    sectionFive.textContent = fiveDaysAway;
     let tasks = getAllTasks();
     tasks.forEach((task) => {
         if (task.dueDate === tomorrow) {
