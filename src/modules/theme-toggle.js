@@ -1,5 +1,3 @@
-import { themeSlider } from "./dom-query";
-
 function toggleDarkMode() {
     if (document.documentElement.classList.contains("light")) {
       document.documentElement.classList.remove("light")
@@ -16,12 +14,6 @@ function toggleDarkMode() {
     }
   }
 
-let changeDisplayedTheme = () => {
-    themeSlider.addEventListener('click', toggleDarkMode);
-    console.log('works')
-};
-
 export {
-    toggleDarkMode,
-    changeDisplayedTheme
+    toggleDarkMode
 }
