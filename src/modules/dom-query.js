@@ -24,6 +24,10 @@ let themeSlider = document.querySelector('#checkbox');
 let contentContainer = document.querySelector('.content-container');
 let popUpContainer = document.querySelector('.pop-up-container');
 let sectionOne = document.querySelector('.section-one');
+let sectionTwo = document.querySelector('.section-two');
+let sectionThree = document.querySelector('.section-three');
+let sectionFour = document.querySelector('.section-four');
+let sectionFive = document.querySelector('.section-five');
 let mainAddTaskContainer = document.querySelector('.main-add-task-container');
 let taskCardsContainer = document.querySelector('.task-cards-container');
 let contentHeader = document.querySelector('.content-header');
@@ -55,6 +59,10 @@ export {
     contentContainer, 
     popUpContainer,
     sectionOne,
+    sectionTwo,
+    sectionThree,
+    sectionFour,
+    sectionFive,
     mainAddTaskContainer,
     taskCardsContainer,
     contentHeader
