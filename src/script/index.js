@@ -18,4 +18,5 @@ collapseSidebarIcon.addEventListener('click', () => {
     collapseSidebar();
     generateExpandSidebarIcon();
 });
+inboxFolder.addEventListener('click', generateInbox);
 todayFolder.addEventListener('click', generateToday);

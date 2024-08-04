@@ -14,6 +14,7 @@ console.log(currentDate);
 
 let generateInbox = () => {
     removeInboxCards();
+    contentHeader.textContent = 'inbox';
     let tasks = getAllTasks();
     tasks.forEach((task) => {
         let taskCard = document.createElement('div');
