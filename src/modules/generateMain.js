@@ -29,11 +29,11 @@ class MyCustomDate extends Date {
     let fiveDaysAway = JSON.stringify(fiveDaysAwayRaw).slice(1, 11);
 
 let resetFolderHighlight = () => {
-    inboxFolder.style.backgroundColor = 'var(--nav-bg-color)';
-    todayFolder.style.backgroundColor = 'var(--nav-bg-color)';
-    upcomingFolder.style.backgroundColor = 'var(--nav-bg-color)';
-    priorityFolder.style.backgroundColor = 'var(--nav-bg-color)';
-    completedFolder.style.backgroundColor = 'var(--nav-bg-color)';
+    inboxFolder.style.backgroundColor = '';
+    todayFolder.style.backgroundColor = '';
+    upcomingFolder.style.backgroundColor = '';
+    priorityFolder.style.backgroundColor = '';
+    completedFolder.style.backgroundColor = '';
 };
     
 let generateInbox = () => {
