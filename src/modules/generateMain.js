@@ -3,6 +3,7 @@ import { generateEditTaskPopUp, removeInboxCards } from "./edit-task-pop-up";
 import { getAllTasks } from "./get-all-tasks"
 import { markComplete } from "./mark-task-complete";
 
+let currentFolder;
 let selectedObjectTitle;
 let selectedObjectDescription;
 let selectedObjectDueDate;
@@ -38,6 +39,7 @@ let resetFolderHighlight = () => {
 };
 
 let generateInbox = () => {
+    currentFolder = 'inbox';
     resetFolderHighlight();
     inboxFolder.style.backgroundColor = 'var(--color-selected)';
     removeInboxCards();
@@ -122,6 +124,7 @@ let generateInbox = () => {
 };
 
 let generateToday = () => {
+    currentFolder = 'today';
     resetFolderHighlight();
     todayFolder.style.backgroundColor = 'var(--color-selected)';
     removeInboxCards();
@@ -206,6 +209,7 @@ let generateToday = () => {
 }
 
 let generateUpcoming = () => {
+    currentFolder = 'upcoming';
     resetFolderHighlight();
     upcomingFolder.style.backgroundColor = 'var(--color-selected)';
     removeInboxCards();
@@ -555,6 +559,7 @@ let generateUpcoming = () => {
 }
 
 let generatePriority = () => {
+    currentFolder = 'priority';
     resetFolderHighlight();
     priorityFolder.style.backgroundColor = 'var(--color-selected)';
     removeInboxCards();
@@ -772,6 +777,7 @@ let generatePriority = () => {
 };
 
 let generateCompleted = () => {
+    currentFolder = 'completed';
     resetFolderHighlight();
     completedFolder.style.backgroundColor = 'var(--color-selected)';
     removeInboxCards();
@@ -857,5 +863,6 @@ export {
     selectedObjectDueDate,
     selectedObjectPriority,
     selectedObjectProject,
-    selectedObjectId
+    selectedObjectId,
+    currentFolder
 }

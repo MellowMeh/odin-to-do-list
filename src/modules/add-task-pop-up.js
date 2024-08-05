@@ -2,7 +2,7 @@ import { popUpContainer } from "./dom-query";
 import { taskCreator } from "./create-task";
 import { updateTasks } from "./update-tasks";
 import { removeInboxCards } from "./edit-task-pop-up";
-import { generateInbox } from "./generateMain";
+import { currentFolder, generateCompleted, generateInbox, generatePriority, generateToday, generateUpcoming } from "./generateMain";
 
 let taskNameInput;
 let descriptionInput;
@@ -103,7 +103,18 @@ let captureAddTaskPopUpInformation = () => {
    let userInput = taskCreator(taskNameInput.value, descriptionInput.value, dueDateInput.value, priorityInput.value)
    updateTasks(userInput);
    removeInboxCards();
-   generateInbox();
+   console.log(currentFolder);
+   if (currentFolder === 'inbox') {
+    generateInbox();
+   } else if (currentFolder === 'today') {
+    generateToday();
+   } else if (currentFolder === 'upcoming') {
+    generateUpcoming();
+   } else if (currentFolder === 'priority') {
+    generatePriority();
+   } else if (currentFolder === 'completed') {
+    generateCompleted();
+   }
    closeAddTaskPopUp();
 };
 export {generateAddTaskPopUp, closeAddTaskPopUp, captureAddTaskPopUpInformation};
