@@ -133,7 +133,6 @@ let captureEdit = () => {
         description: descriptionInput.value,
         dueDate: dueDateInput.value,
         priority: priorityInput.value,
-        project: projectInput.value,
         id: selectedObjectId
     }
     updateTasks(userInput);
