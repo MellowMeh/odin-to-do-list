@@ -100,7 +100,7 @@ let closeAddTaskPopUp = () => {
 }
 
 let captureAddTaskPopUpInformation = () => {
-   let userInput = taskCreator(taskNameInput.value, descriptionInput.value, dueDateInput.value, priorityInput.value, projectInput.value)
+   let userInput = taskCreator(taskNameInput.value, descriptionInput.value, dueDateInput.value, priorityInput.value)
    updateTasks(userInput);
    removeInboxCards();
    generateInbox();
