@@ -50,10 +50,22 @@ let generateInbox = () => {
         let taskCard = document.createElement('div');
         taskCard.setAttribute('class', 'task-card');
 
+        let checkMark;
+
         let taskCheckBoxCode = '<svg xmlns="http://www.w3.org/2000/svg" width="24px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>circle</title><path d="M11.5,3C16.75,3 21,7.25 21,12.5C21,17.75 16.75,22 11.5,22C6.25,22 2,17.75 2,12.5C2,7.25 6.25,3 11.5,3M11.5,4C6.81,4 3,7.81 3,12.5C3,17.19 6.81,21 11.5,21C16.19,21 20,17.19 20,12.5C20,7.81 16.19,4 11.5,4Z" /></svg>'
         let taskCheckbox = document.createElement('div');
         taskCheckbox.setAttribute('class', 'task-checkbox');
         taskCheckbox.innerHTML = taskCheckBoxCode;
+        taskCheckbox.addEventListener('mouseenter', () => {
+            let checkMarkCode = '<svg xmlns="http://www.w3.org/2000/svg" width="18px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>check</title><path d="M18.9,8.1L9,18L4.05,13.05L4.76,12.34L9,16.59L18.19,7.39L18.9,8.1Z" /></svg>'
+            checkMark = document.createElement('div');
+            checkMark.setAttribute('class', 'checkmark');
+            checkMark.innerHTML = checkMarkCode;
+            taskCheckbox.appendChild(checkMark);
+        });
+        taskCheckbox.addEventListener('mouseleave', () => {
+            taskCheckbox.removeChild(checkMark);
+        });
         taskCheckbox.addEventListener('click', () => {
             selectedObjectTitle = task.title;
             selectedObjectDescription = task.description;
@@ -62,7 +74,7 @@ let generateInbox = () => {
             selectedObjectProject = task.project;
             selectedObjectId = task.id;
             markComplete();
-        })
+        });
         taskCard.appendChild(taskCheckbox);
 
         let taskTextContainer = document.createElement('div');
@@ -135,10 +147,22 @@ let generateToday = () => {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
+            let checkMark;
+
             let taskCheckBoxCode = '<svg xmlns="http://www.w3.org/2000/svg" width="24px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>circle</title><path d="M11.5,3C16.75,3 21,7.25 21,12.5C21,17.75 16.75,22 11.5,22C6.25,22 2,17.75 2,12.5C2,7.25 6.25,3 11.5,3M11.5,4C6.81,4 3,7.81 3,12.5C3,17.19 6.81,21 11.5,21C16.19,21 20,17.19 20,12.5C20,7.81 16.19,4 11.5,4Z" /></svg>'
             let taskCheckbox = document.createElement('div');
             taskCheckbox.setAttribute('class', 'task-checkbox');
             taskCheckbox.innerHTML = taskCheckBoxCode;
+            taskCheckbox.addEventListener('mouseenter', () => {
+                let checkMarkCode = '<svg xmlns="http://www.w3.org/2000/svg" width="18px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>check</title><path d="M18.9,8.1L9,18L4.05,13.05L4.76,12.34L9,16.59L18.19,7.39L18.9,8.1Z" /></svg>'
+                checkMark = document.createElement('div');
+                checkMark.setAttribute('class', 'checkmark');
+                checkMark.innerHTML = checkMarkCode;
+                taskCheckbox.appendChild(checkMark);
+            });
+            taskCheckbox.addEventListener('mouseleave', () => {
+                taskCheckbox.removeChild(checkMark);
+            });
             taskCheckbox.addEventListener('click', () => {
                 selectedObjectTitle = task.title;
                 selectedObjectDescription = task.description;
@@ -224,10 +248,22 @@ let generateUpcoming = () => {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
+            let checkMark;
+
             let taskCheckBoxCode = '<svg xmlns="http://www.w3.org/2000/svg" width="24px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>circle</title><path d="M11.5,3C16.75,3 21,7.25 21,12.5C21,17.75 16.75,22 11.5,22C6.25,22 2,17.75 2,12.5C2,7.25 6.25,3 11.5,3M11.5,4C6.81,4 3,7.81 3,12.5C3,17.19 6.81,21 11.5,21C16.19,21 20,17.19 20,12.5C20,7.81 16.19,4 11.5,4Z" /></svg>'
             let taskCheckbox = document.createElement('div');
             taskCheckbox.setAttribute('class', 'task-checkbox');
             taskCheckbox.innerHTML = taskCheckBoxCode;
+            taskCheckbox.addEventListener('mouseenter', () => {
+                let checkMarkCode = '<svg xmlns="http://www.w3.org/2000/svg" width="18px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>check</title><path d="M18.9,8.1L9,18L4.05,13.05L4.76,12.34L9,16.59L18.19,7.39L18.9,8.1Z" /></svg>'
+                checkMark = document.createElement('div');
+                checkMark.setAttribute('class', 'checkmark');
+                checkMark.innerHTML = checkMarkCode;
+                taskCheckbox.appendChild(checkMark);
+            });
+            taskCheckbox.addEventListener('mouseleave', () => {
+                taskCheckbox.removeChild(checkMark);
+            });
             taskCheckbox.addEventListener('click', () => {
                 selectedObjectTitle = task.title;
                 selectedObjectDescription = task.description;
@@ -297,10 +333,31 @@ let generateUpcoming = () => {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
+            let checkMark;
+
             let taskCheckBoxCode = '<svg xmlns="http://www.w3.org/2000/svg" width="24px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>circle</title><path d="M11.5,3C16.75,3 21,7.25 21,12.5C21,17.75 16.75,22 11.5,22C6.25,22 2,17.75 2,12.5C2,7.25 6.25,3 11.5,3M11.5,4C6.81,4 3,7.81 3,12.5C3,17.19 6.81,21 11.5,21C16.19,21 20,17.19 20,12.5C20,7.81 16.19,4 11.5,4Z" /></svg>'
             let taskCheckbox = document.createElement('div');
             taskCheckbox.setAttribute('class', 'task-checkbox');
             taskCheckbox.innerHTML = taskCheckBoxCode;
+            taskCheckbox.addEventListener('mouseenter', () => {
+                let checkMarkCode = '<svg xmlns="http://www.w3.org/2000/svg" width="18px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>check</title><path d="M18.9,8.1L9,18L4.05,13.05L4.76,12.34L9,16.59L18.19,7.39L18.9,8.1Z" /></svg>'
+                checkMark = document.createElement('div');
+                checkMark.setAttribute('class', 'checkmark');
+                checkMark.innerHTML = checkMarkCode;
+                taskCheckbox.appendChild(checkMark);
+            });
+            taskCheckbox.addEventListener('mouseleave', () => {
+                taskCheckbox.removeChild(checkMark);
+            });
+            taskCheckbox.addEventListener('click', () => {
+                selectedObjectTitle = task.title;
+                selectedObjectDescription = task.description;
+                selectedObjectDueDate = task.dueDate;
+                selectedObjectPriority = task.priority;
+                selectedObjectProject = task.project;
+                selectedObjectId = task.id;
+                markComplete();
+            })
             taskCard.appendChild(taskCheckbox);
 
             let taskTextContainer = document.createElement('div');
@@ -361,10 +418,31 @@ let generateUpcoming = () => {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
+            let checkMark;
+
             let taskCheckBoxCode = '<svg xmlns="http://www.w3.org/2000/svg" width="24px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>circle</title><path d="M11.5,3C16.75,3 21,7.25 21,12.5C21,17.75 16.75,22 11.5,22C6.25,22 2,17.75 2,12.5C2,7.25 6.25,3 11.5,3M11.5,4C6.81,4 3,7.81 3,12.5C3,17.19 6.81,21 11.5,21C16.19,21 20,17.19 20,12.5C20,7.81 16.19,4 11.5,4Z" /></svg>'
             let taskCheckbox = document.createElement('div');
             taskCheckbox.setAttribute('class', 'task-checkbox');
             taskCheckbox.innerHTML = taskCheckBoxCode;
+            taskCheckbox.addEventListener('mouseenter', () => {
+                let checkMarkCode = '<svg xmlns="http://www.w3.org/2000/svg" width="18px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>check</title><path d="M18.9,8.1L9,18L4.05,13.05L4.76,12.34L9,16.59L18.19,7.39L18.9,8.1Z" /></svg>'
+                checkMark = document.createElement('div');
+                checkMark.setAttribute('class', 'checkmark');
+                checkMark.innerHTML = checkMarkCode;
+                taskCheckbox.appendChild(checkMark);
+            });
+            taskCheckbox.addEventListener('mouseleave', () => {
+                taskCheckbox.removeChild(checkMark);
+            });
+            taskCheckbox.addEventListener('click', () => {
+                selectedObjectTitle = task.title;
+                selectedObjectDescription = task.description;
+                selectedObjectDueDate = task.dueDate;
+                selectedObjectPriority = task.priority;
+                selectedObjectProject = task.project;
+                selectedObjectId = task.id;
+                markComplete();
+            })
             taskCard.appendChild(taskCheckbox);
 
             let taskTextContainer = document.createElement('div');
@@ -425,10 +503,31 @@ let generateUpcoming = () => {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
+            let checkMark;
+
             let taskCheckBoxCode = '<svg xmlns="http://www.w3.org/2000/svg" width="24px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>circle</title><path d="M11.5,3C16.75,3 21,7.25 21,12.5C21,17.75 16.75,22 11.5,22C6.25,22 2,17.75 2,12.5C2,7.25 6.25,3 11.5,3M11.5,4C6.81,4 3,7.81 3,12.5C3,17.19 6.81,21 11.5,21C16.19,21 20,17.19 20,12.5C20,7.81 16.19,4 11.5,4Z" /></svg>'
             let taskCheckbox = document.createElement('div');
             taskCheckbox.setAttribute('class', 'task-checkbox');
             taskCheckbox.innerHTML = taskCheckBoxCode;
+            taskCheckbox.addEventListener('mouseenter', () => {
+                let checkMarkCode = '<svg xmlns="http://www.w3.org/2000/svg" width="18px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>check</title><path d="M18.9,8.1L9,18L4.05,13.05L4.76,12.34L9,16.59L18.19,7.39L18.9,8.1Z" /></svg>'
+                checkMark = document.createElement('div');
+                checkMark.setAttribute('class', 'checkmark');
+                checkMark.innerHTML = checkMarkCode;
+                taskCheckbox.appendChild(checkMark);
+            });
+            taskCheckbox.addEventListener('mouseleave', () => {
+                taskCheckbox.removeChild(checkMark);
+            });
+            taskCheckbox.addEventListener('click', () => {
+                selectedObjectTitle = task.title;
+                selectedObjectDescription = task.description;
+                selectedObjectDueDate = task.dueDate;
+                selectedObjectPriority = task.priority;
+                selectedObjectProject = task.project;
+                selectedObjectId = task.id;
+                markComplete();
+            })
             taskCard.appendChild(taskCheckbox);
 
             let taskTextContainer = document.createElement('div');
@@ -489,10 +588,31 @@ let generateUpcoming = () => {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
+            let checkMark;
+
             let taskCheckBoxCode = '<svg xmlns="http://www.w3.org/2000/svg" width="24px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>circle</title><path d="M11.5,3C16.75,3 21,7.25 21,12.5C21,17.75 16.75,22 11.5,22C6.25,22 2,17.75 2,12.5C2,7.25 6.25,3 11.5,3M11.5,4C6.81,4 3,7.81 3,12.5C3,17.19 6.81,21 11.5,21C16.19,21 20,17.19 20,12.5C20,7.81 16.19,4 11.5,4Z" /></svg>'
             let taskCheckbox = document.createElement('div');
             taskCheckbox.setAttribute('class', 'task-checkbox');
             taskCheckbox.innerHTML = taskCheckBoxCode;
+            taskCheckbox.addEventListener('mouseenter', () => {
+                let checkMarkCode = '<svg xmlns="http://www.w3.org/2000/svg" width="18px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>check</title><path d="M18.9,8.1L9,18L4.05,13.05L4.76,12.34L9,16.59L18.19,7.39L18.9,8.1Z" /></svg>'
+                checkMark = document.createElement('div');
+                checkMark.setAttribute('class', 'checkmark');
+                checkMark.innerHTML = checkMarkCode;
+                taskCheckbox.appendChild(checkMark);
+            });
+            taskCheckbox.addEventListener('mouseleave', () => {
+                taskCheckbox.removeChild(checkMark);
+            });
+            taskCheckbox.addEventListener('click', () => {
+                selectedObjectTitle = task.title;
+                selectedObjectDescription = task.description;
+                selectedObjectDueDate = task.dueDate;
+                selectedObjectPriority = task.priority;
+                selectedObjectProject = task.project;
+                selectedObjectId = task.id;
+                markComplete();
+            })
             taskCard.appendChild(taskCheckbox);
 
             let taskTextContainer = document.createElement('div');
@@ -567,10 +687,22 @@ let generatePriority = () => {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
+            let checkMark;
+
             let taskCheckBoxCode = '<svg xmlns="http://www.w3.org/2000/svg" width="24px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>circle</title><path d="M11.5,3C16.75,3 21,7.25 21,12.5C21,17.75 16.75,22 11.5,22C6.25,22 2,17.75 2,12.5C2,7.25 6.25,3 11.5,3M11.5,4C6.81,4 3,7.81 3,12.5C3,17.19 6.81,21 11.5,21C16.19,21 20,17.19 20,12.5C20,7.81 16.19,4 11.5,4Z" /></svg>'
             let taskCheckbox = document.createElement('div');
             taskCheckbox.setAttribute('class', 'task-checkbox');
             taskCheckbox.innerHTML = taskCheckBoxCode;
+            taskCheckbox.addEventListener('mouseenter', () => {
+                let checkMarkCode = '<svg xmlns="http://www.w3.org/2000/svg" width="18px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>check</title><path d="M18.9,8.1L9,18L4.05,13.05L4.76,12.34L9,16.59L18.19,7.39L18.9,8.1Z" /></svg>'
+                checkMark = document.createElement('div');
+                checkMark.setAttribute('class', 'checkmark');
+                checkMark.innerHTML = checkMarkCode;
+                taskCheckbox.appendChild(checkMark);
+            });
+            taskCheckbox.addEventListener('mouseleave', () => {
+                taskCheckbox.removeChild(checkMark);
+            });
             taskCheckbox.addEventListener('click', () => {
                 selectedObjectTitle = task.title;
                 selectedObjectDescription = task.description;
@@ -640,10 +772,31 @@ let generatePriority = () => {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
+            let checkMark;
+
             let taskCheckBoxCode = '<svg xmlns="http://www.w3.org/2000/svg" width="24px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>circle</title><path d="M11.5,3C16.75,3 21,7.25 21,12.5C21,17.75 16.75,22 11.5,22C6.25,22 2,17.75 2,12.5C2,7.25 6.25,3 11.5,3M11.5,4C6.81,4 3,7.81 3,12.5C3,17.19 6.81,21 11.5,21C16.19,21 20,17.19 20,12.5C20,7.81 16.19,4 11.5,4Z" /></svg>'
             let taskCheckbox = document.createElement('div');
             taskCheckbox.setAttribute('class', 'task-checkbox');
             taskCheckbox.innerHTML = taskCheckBoxCode;
+            taskCheckbox.addEventListener('mouseenter', () => {
+                let checkMarkCode = '<svg xmlns="http://www.w3.org/2000/svg" width="18px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>check</title><path d="M18.9,8.1L9,18L4.05,13.05L4.76,12.34L9,16.59L18.19,7.39L18.9,8.1Z" /></svg>'
+                checkMark = document.createElement('div');
+                checkMark.setAttribute('class', 'checkmark');
+                checkMark.innerHTML = checkMarkCode;
+                taskCheckbox.appendChild(checkMark);
+            });
+            taskCheckbox.addEventListener('mouseleave', () => {
+                taskCheckbox.removeChild(checkMark);
+            });
+            taskCheckbox.addEventListener('click', () => {
+                selectedObjectTitle = task.title;
+                selectedObjectDescription = task.description;
+                selectedObjectDueDate = task.dueDate;
+                selectedObjectPriority = task.priority;
+                selectedObjectProject = task.project;
+                selectedObjectId = task.id;
+                markComplete();
+            })
             taskCard.appendChild(taskCheckbox);
 
             let taskTextContainer = document.createElement('div');
@@ -704,10 +857,31 @@ let generatePriority = () => {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
+            let checkMark;
+
             let taskCheckBoxCode = '<svg xmlns="http://www.w3.org/2000/svg" width="24px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>circle</title><path d="M11.5,3C16.75,3 21,7.25 21,12.5C21,17.75 16.75,22 11.5,22C6.25,22 2,17.75 2,12.5C2,7.25 6.25,3 11.5,3M11.5,4C6.81,4 3,7.81 3,12.5C3,17.19 6.81,21 11.5,21C16.19,21 20,17.19 20,12.5C20,7.81 16.19,4 11.5,4Z" /></svg>'
             let taskCheckbox = document.createElement('div');
             taskCheckbox.setAttribute('class', 'task-checkbox');
             taskCheckbox.innerHTML = taskCheckBoxCode;
+            taskCheckbox.addEventListener('mouseenter', () => {
+                let checkMarkCode = '<svg xmlns="http://www.w3.org/2000/svg" width="18px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>check</title><path d="M18.9,8.1L9,18L4.05,13.05L4.76,12.34L9,16.59L18.19,7.39L18.9,8.1Z" /></svg>'
+                checkMark = document.createElement('div');
+                checkMark.setAttribute('class', 'checkmark');
+                checkMark.innerHTML = checkMarkCode;
+                taskCheckbox.appendChild(checkMark);
+            });
+            taskCheckbox.addEventListener('mouseleave', () => {
+                taskCheckbox.removeChild(checkMark);
+            });
+            taskCheckbox.addEventListener('click', () => {
+                selectedObjectTitle = task.title;
+                selectedObjectDescription = task.description;
+                selectedObjectDueDate = task.dueDate;
+                selectedObjectPriority = task.priority;
+                selectedObjectProject = task.project;
+                selectedObjectId = task.id;
+                markComplete();
+            })
             taskCard.appendChild(taskCheckbox);
 
             let taskTextContainer = document.createElement('div');
@@ -779,10 +953,31 @@ let generateCompleted = () => {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
+            let checkMark;
+
             let taskCheckBoxCode = '<svg xmlns="http://www.w3.org/2000/svg" width="24px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>circle</title><path d="M11.5,3C16.75,3 21,7.25 21,12.5C21,17.75 16.75,22 11.5,22C6.25,22 2,17.75 2,12.5C2,7.25 6.25,3 11.5,3M11.5,4C6.81,4 3,7.81 3,12.5C3,17.19 6.81,21 11.5,21C16.19,21 20,17.19 20,12.5C20,7.81 16.19,4 11.5,4Z" /></svg>'
             let taskCheckbox = document.createElement('div');
             taskCheckbox.setAttribute('class', 'task-checkbox');
             taskCheckbox.innerHTML = taskCheckBoxCode;
+            taskCheckbox.addEventListener('mouseenter', () => {
+                let checkMarkCode = '<svg xmlns="http://www.w3.org/2000/svg" width="18px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>check</title><path d="M18.9,8.1L9,18L4.05,13.05L4.76,12.34L9,16.59L18.19,7.39L18.9,8.1Z" /></svg>'
+                checkMark = document.createElement('div');
+                checkMark.setAttribute('class', 'checkmark');
+                checkMark.innerHTML = checkMarkCode;
+                taskCheckbox.appendChild(checkMark);
+            });
+            taskCheckbox.addEventListener('mouseleave', () => {
+                taskCheckbox.removeChild(checkMark);
+            });
+            taskCheckbox.addEventListener('click', () => {
+                selectedObjectTitle = task.title;
+                selectedObjectDescription = task.description;
+                selectedObjectDueDate = task.dueDate;
+                selectedObjectPriority = task.priority;
+                selectedObjectProject = task.project;
+                selectedObjectId = task.id;
+                markComplete();
+            })
             taskCard.appendChild(taskCheckbox);
 
             let taskTextContainer = document.createElement('div');

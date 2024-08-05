@@ -423,6 +423,16 @@ main {
     box-shadow: 10px 10px 10px -13px var(--color-accent-bg);
   }
 
+.task-checkbox {
+  position: relative;
+}
+
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
   .task-text {
     max-inline-size: 22ch;
     margin-top: 3px;
