@@ -1,5 +1,5 @@
 import { removeInboxCards } from "./edit-task-pop-up";
-import { generateInbox, selectedObjectDescription, selectedObjectDueDate, selectedObjectId, selectedObjectPriority, selectedObjectTitle } from "./generateMain";
+import { currentFolder, generateCompleted, generateInbox, generatePriority, generateToday, generateUpcoming, selectedObjectDescription, selectedObjectDueDate, selectedObjectId, selectedObjectPriority, selectedObjectTitle } from "./generateMain";
 import { updateTasks } from "./update-tasks";
 
 
