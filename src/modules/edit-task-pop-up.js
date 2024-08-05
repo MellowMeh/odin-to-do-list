@@ -143,5 +143,6 @@ let captureEdit = () => {
 
 export {
     generateEditTaskPopUp,
-    removeInboxCards
+    removeInboxCards,
+    captureEdit
 }

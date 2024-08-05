@@ -1,6 +1,7 @@
 import { completedFolder, contentHeader, inboxFolder, priorityFolder, sectionFive, sectionFour, sectionOne, sectionThree, sectionTwo, taskCardsContainer, todayFolder, upcomingFolder } from "./dom-query";
 import { generateEditTaskPopUp, removeInboxCards } from "./edit-task-pop-up";
 import { getAllTasks } from "./get-all-tasks"
+import { markComplete } from "./mark-task-complete";
 
 let selectedObjectTitle;
 let selectedObjectDescription;
@@ -35,7 +36,7 @@ let resetFolderHighlight = () => {
     priorityFolder.style.backgroundColor = '';
     completedFolder.style.backgroundColor = '';
 };
-    
+
 let generateInbox = () => {
     resetFolderHighlight();
     inboxFolder.style.backgroundColor = 'var(--color-selected)';
@@ -50,6 +51,15 @@ let generateInbox = () => {
         let taskCheckbox = document.createElement('div');
         taskCheckbox.setAttribute('class', 'task-checkbox');
         taskCheckbox.innerHTML = taskCheckBoxCode;
+        taskCheckbox.addEventListener('click', () => {
+            selectedObjectTitle = task.title;
+            selectedObjectDescription = task.description;
+            selectedObjectDueDate = task.dueDate;
+            selectedObjectPriority = task.priority;
+            selectedObjectProject = task.project;
+            selectedObjectId = task.id;
+            markComplete();
+        })
         taskCard.appendChild(taskCheckbox);
 
         let taskTextContainer = document.createElement('div');
