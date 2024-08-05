@@ -44,6 +44,7 @@ let generateInbox = () => {
     contentHeader.textContent = 'inbox';
     let tasks = getAllTasks();
     tasks.forEach((task) => {
+    if (task.project !== 'complete') {
         let taskCard = document.createElement('div');
         taskCard.setAttribute('class', 'task-card');
 
@@ -116,6 +117,7 @@ let generateInbox = () => {
         taskCard.appendChild(taskOptions);
 
         taskCardsContainer.appendChild(taskCard);
+    }
     })
 };
 
