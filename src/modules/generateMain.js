@@ -959,25 +959,11 @@ let generateCompleted = () => {
             let taskCheckbox = document.createElement('div');
             taskCheckbox.setAttribute('class', 'task-checkbox');
             taskCheckbox.innerHTML = taskCheckBoxCode;
-            taskCheckbox.addEventListener('mouseenter', () => {
                 let checkMarkCode = '<svg xmlns="http://www.w3.org/2000/svg" width="18px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>check</title><path d="M18.9,8.1L9,18L4.05,13.05L4.76,12.34L9,16.59L18.19,7.39L18.9,8.1Z" /></svg>'
                 checkMark = document.createElement('div');
                 checkMark.setAttribute('class', 'checkmark');
                 checkMark.innerHTML = checkMarkCode;
                 taskCheckbox.appendChild(checkMark);
-            });
-            taskCheckbox.addEventListener('mouseleave', () => {
-                taskCheckbox.removeChild(checkMark);
-            });
-            taskCheckbox.addEventListener('click', () => {
-                selectedObjectTitle = task.title;
-                selectedObjectDescription = task.description;
-                selectedObjectDueDate = task.dueDate;
-                selectedObjectPriority = task.priority;
-                selectedObjectProject = task.project;
-                selectedObjectId = task.id;
-                markComplete();
-            })
             taskCard.appendChild(taskCheckbox);
 
             let taskTextContainer = document.createElement('div');
