@@ -136,6 +136,15 @@ let generateToday = () => {
             let taskCheckbox = document.createElement('div');
             taskCheckbox.setAttribute('class', 'task-checkbox');
             taskCheckbox.innerHTML = taskCheckBoxCode;
+            taskCheckbox.addEventListener('click', () => {
+                selectedObjectTitle = task.title;
+                selectedObjectDescription = task.description;
+                selectedObjectDueDate = task.dueDate;
+                selectedObjectPriority = task.priority;
+                selectedObjectProject = task.project;
+                selectedObjectId = task.id;
+                markComplete();
+            })
             taskCard.appendChild(taskCheckbox);
 
             let taskTextContainer = document.createElement('div');
@@ -216,6 +225,15 @@ let generateUpcoming = () => {
             let taskCheckbox = document.createElement('div');
             taskCheckbox.setAttribute('class', 'task-checkbox');
             taskCheckbox.innerHTML = taskCheckBoxCode;
+            taskCheckbox.addEventListener('click', () => {
+                selectedObjectTitle = task.title;
+                selectedObjectDescription = task.description;
+                selectedObjectDueDate = task.dueDate;
+                selectedObjectPriority = task.priority;
+                selectedObjectProject = task.project;
+                selectedObjectId = task.id;
+                markComplete();
+            })
             taskCard.appendChild(taskCheckbox);
 
             let taskTextContainer = document.createElement('div');
@@ -554,6 +572,15 @@ let generatePriority = () => {
             let taskCheckbox = document.createElement('div');
             taskCheckbox.setAttribute('class', 'task-checkbox');
             taskCheckbox.innerHTML = taskCheckBoxCode;
+            taskCheckbox.addEventListener('click', () => {
+                selectedObjectTitle = task.title;
+                selectedObjectDescription = task.description;
+                selectedObjectDueDate = task.dueDate;
+                selectedObjectPriority = task.priority;
+                selectedObjectProject = task.project;
+                selectedObjectId = task.id;
+                markComplete();
+            })
             taskCard.appendChild(taskCheckbox);
 
             let taskTextContainer = document.createElement('div');
