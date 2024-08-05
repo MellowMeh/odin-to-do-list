@@ -1,5 +1,5 @@
 import { popUpContainer, sectionFive, sectionFour, sectionThree, sectionTwo, taskCardsContainer } from "./dom-query";
-import { generateInbox, selectedObjectDescription, selectedObjectDueDate, selectedObjectId, selectedObjectPriority, selectedObjectProject, selectedObjectTitle } from "./generateMain";
+import { currentFolder, generateCompleted, generateInbox, generatePriority, generateToday, generateUpcoming, selectedObjectDescription, selectedObjectDueDate, selectedObjectId, selectedObjectPriority, selectedObjectProject, selectedObjectTitle } from "./generateMain";
 import { closeAddTaskPopUp, captureAddTaskPopUpInformation } from "./add-task-pop-up";
 import { updateTasks } from "./update-tasks";
 import { deleteTask } from "./delete-task";
@@ -137,7 +137,18 @@ let captureEdit = () => {
     }
     updateTasks(userInput);
     removeInboxCards();
-    generateInbox();
+    console.log(currentFolder);
+    if (currentFolder === 'inbox') {
+     generateInbox();
+    } else if (currentFolder === 'today') {
+     generateToday();
+    } else if (currentFolder === 'upcoming') {
+     generateUpcoming();
+    } else if (currentFolder === 'priority') {
+     generatePriority();
+    } else if (currentFolder === 'completed') {
+     generateCompleted();
+    }
     closeAddTaskPopUp();
  };
 
