@@ -334,6 +334,17 @@ main {
   margin-top: 20px;
 }
 
+.section-one,
+.section-two,
+.section-three,
+.section-four,
+.section-five {
+  height: 85svh;
+  overflow-y: auto;
+  scrollbar-color: var(--color-nav-bg) var(--color-base-bg);
+  scrollbar-width: thin;
+}
+
 .task-cards-container,
 .section-two-task-cards-container,
 .section-three-task-cards-container,
