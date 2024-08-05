@@ -773,7 +773,7 @@ let generatePriority = () => {
 
 let generateCompleted = () => {
     resetFolderHighlight();
-    todayFolder.style.backgroundColor = 'var(--color-selected)';
+    completedFolder.style.backgroundColor = 'var(--color-selected)';
     removeInboxCards();
     contentHeader.textContent = 'completed';
     let tasks = getAllTasks();
