@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin'sToDo</title>
+    <link rel="icon" type="image/x-icon" href="../src/image/favicon.png">
+<script defer src="bundle.js"></script></head>
+<body>
+    <div class="sidebar-container">
+        <nav>
+            <div class="profile-container">
+                <div class="user-container">
+                    <div class="profile-icon-background"> <img id="profile-icon" src="../src/image/favicon.png"></div>
+                    <div class="user-name">Odin</div>
+                    <div id="arrow-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><path d="M5.84,9.59L11.5,15.25L17.16,9.59L16.45,8.89L11.5,13.84L6.55,8.89L5.84,9.59Z"/></svg></div>
+                </div>
+                <div class="icon-container">
+                    <div id="notification-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>bell</title><path d="M12,4.5C12,4.22 11.78,4 11.5,4C11.22,4 11,4.22 11,4.5V6.03C8.75,6.28 7,8.18 7,10.5V16.41L5.41,18H17.59L16,16.41V10.5C16,8.18 14.25,6.28 12,6.03V4.5M11.5,3C12.33,3 13,3.67 13,4.5V5.21C15.31,5.86 17,8 17,10.5V16L20,19H3L6,16V10.5C6,8 7.69,5.86 10,5.21V4.5C10,3.67 10.67,3 11.5,3M11.5,22C10.29,22 9.28,21.14 9.05,20H10.09C10.29,20.58 10.85,21 11.5,21C12.15,21 12.71,20.58 12.91,20H13.95C13.72,21.14 12.71,22 11.5,22Z"/></svg></div>
+                    <div id="collapse-sidebar-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>backburger</title><path d="M5,13L9,17L7.6,18.42L1.18,12L7.6,5.58L9,7L5,11H21V13H5M21,6V8H11V6H21M21,16V18H11V16H21Z"/></svg></div>
+                </div>
+            </div>
+            <div class="add-task-container">
+                <div class="plus-icon"><svg xmlns="http://www.w3.org/2000/svg" width="26px" fill="#5285F4" stroke="#5285F4" viewBox="0 0 24 24"><title>plus-circle</title><path d="M17,13H13V17H11V13H7V11H11V7H13V11H17M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/></svg></div>
+                <div class="add-task">add task</div>
+            </div>
+            <div class="task-folders-container">
+                <div class="inbox-container">
+                    <div class="inbox-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>inbox</title><path d="M6,4H17C18.66,4 20,5.34 20,7V18C20,19.66 18.66,21 17,21H6C4.34,21 3,19.66 3,18V7C3,5.34 4.34,4 6,4M6,5C4.9,5 4,5.9 4,7V15H9V15.5C9,16.88 10.12,18 11.5,18C12.88,18 14,16.88 14,15.5V15H19V7C19,5.9 18.1,5 17,5H6M4,18C4,19.1 4.9,20 6,20H17C18.1,20 19,19.1 19,18V16H14.96C14.72,17.7 13.26,19 11.5,19C9.74,19 8.28,17.7 8.04,16H4V18Z"/></svg></div>
+                    <div class="inbox">inbox</div>
+                </div>
+                <div class="today-container">
+                    <div class="today-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>calendar</title><path d="M7,2H8C8.55,2 9,2.45 9,3V4H14V3C14,2.45 14.45,2 15,2H16C16.55,2 17,2.45 17,3V4C18.66,4 20,5.34 20,7V18C20,19.66 18.66,21 17,21H6C4.34,21 3,19.66 3,18V7C3,5.34 4.34,4 6,4V3C6,2.45 6.45,2 7,2M15,4H16V3H15V4M8,4V3H7V4H8M6,5C4.9,5 4,5.9 4,7V8H19V7C19,5.9 18.1,5 17,5H6M4,18C4,19.1 4.9,20 6,20H17C18.1,20 19,19.1 19,18V9H4V18M12,13H17V18H12V13M13,14V17H16V14H13Z"/></svg></div>
+                    <div class="today">today</div>
+                </div>
+                <div class="upcoming-container">
+                    <div class="upcoming-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>clock</title><path d="M11.5,3C16.75,3 21,7.25 21,12.5C21,17.75 16.75,22 11.5,22C6.25,22 2,17.75 2,12.5C2,7.25 6.25,3 11.5,3M11.5,4C6.81,4 3,7.81 3,12.5C3,17.19 6.81,21 11.5,21C16.19,21 20,17.19 20,12.5C20,7.81 16.19,4 11.5,4M11,7H12V12.42L16.7,15.13L16.2,16L11,13V7Z"/></svg></div>
+                    <div class="upcoming">upcoming</div>
+                </div>
+                <div class="priority-container">
+                    <div class="priority-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>alert-octagon</title><path d="M3,16V9L8,4H15L20,9V16.03L15.03,21H8L3,16M8.39,5L4,9.39V15.6L8.4,20H14.61L19,15.61V9.39L14.61,5H8.39M11,8H12V13H11V8M11,15H12V17H11V15Z" /></svg></div>
+                    <div class="priority">priority</div>
+                </div>
+                <div class="completed-container">
+                    <div class="completed-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>check</title><path d="M18.9,8.1L9,18L4.05,13.05L4.76,12.34L9,16.59L18.19,7.39L18.9,8.1Z" /></svg></div>
+                    <div class="completed">completed</div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <div class="theme-selector-container">
+            <label class="switch">
+                <input type="checkbox" id="checkbox">
+                <span class="slider round"></span>
+              </label>
+        </div>
+        <div class="content-header-container">
+            <div class="content-header"></div>
+        </div>
+        <div class="content-container">
+            <div class="section-one">
+                <div class="section-header"></div>
+                <div class="task-cards-container"></div>
+                <div class="main-add-task-container">
+                    <div class="main-plus-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20px" fill="currentColor" stroke="currentColor" viewBox="0 0 24 24"><title>plus</title><path d="M5,13V12H11V6H12V12H18V13H12V19H11V13H5Z" /></svg></div>
+                    <div class="main-add-task">add task</div>
+                </div>
+            </div>
+            <div class="section-two">
+                <div class="section-two-header"></div>
+                <div class="section-two-task-cards-container"></div>
+            </div>
+            <div class="section-three">
+                <div class="section-three-header"></div>
+                <div class="section-three-task-cards-container"></div>
+            </div>
+            <div class="section-four">
+                <div class="section-four-header"></div>
+                <div class="section-four-task-cards-container"></div>
+            </div>
+            <div class="section-five">
+                <div class="section-five-header"></div>
+                <div class="section-five-task-cards-container"></div>
+            </div>
+            <div class="pop-up-container">   
+        </div>
+    </main>
+</body>
+</html>
