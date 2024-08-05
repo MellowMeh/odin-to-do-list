@@ -89,19 +89,6 @@ let generateEditTaskPopUp = () => {
     addTaskPopUpBottom.setAttribute('class', 'add-task-pop-up-bottom');
     addTaskPopUpContainer.appendChild(addTaskPopUpBottom);
 
-    projectInput = document.createElement('select');
-    projectInput.setAttribute('class', 'add-task-pop-up-input');
-    projectInput.setAttribute('id', 'project-input');
-        let projectPlaceholder = document.createElement('option');
-        projectPlaceholder.setAttribute('placedholder', selectedObjectProject);
-        projectPlaceholder.setAttribute('value', selectedObjectProject);
-        projectPlaceholder.setAttribute('disabled', 'true');
-        projectPlaceholder.setAttribute('selected', 'true');
-        projectPlaceholder.textContent = 'project';
-
-    addTaskPopUpBottom.appendChild(projectInput);
-        projectInput.appendChild(projectPlaceholder);
-
     let addTaskPopUpButtonContainer = document.createElement('div');
     addTaskPopUpButtonContainer.setAttribute('class', 'add-task-pop-up-button-container');
 

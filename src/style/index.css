@@ -511,7 +511,7 @@ main {
 
 .add-task-pop-up-bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
 }
 
