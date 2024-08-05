@@ -26,7 +26,17 @@ let generateEditTaskPopUp = () => {
     deleteTaskIcon.addEventListener('click', () => {
         deleteTask(selectedObjectId);
         removeInboxCards();
-        generateInbox();
+        if (currentFolder === 'inbox') {
+            generateInbox();
+           } else if (currentFolder === 'today') {
+            generateToday();
+           } else if (currentFolder === 'upcoming') {
+            generateUpcoming();
+           } else if (currentFolder === 'priority') {
+            generatePriority();
+           } else if (currentFolder === 'completed') {
+            generateCompleted();
+           }
         closeAddTaskPopUp();
     });
     addTaskPopUpTop.appendChild(deleteTaskIcon);
