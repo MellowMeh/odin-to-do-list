@@ -1,4 +1,4 @@
-import { contentHeader, sectionFive, sectionFour, sectionOne, sectionThree, sectionTwo, taskCardsContainer } from "./dom-query";
+import { completedFolder, contentHeader, inboxFolder, priorityFolder, sectionFive, sectionFour, sectionOne, sectionThree, sectionTwo, taskCardsContainer, todayFolder, upcomingFolder } from "./dom-query";
 import { generateEditTaskPopUp, removeInboxCards } from "./edit-task-pop-up";
 import { getAllTasks } from "./get-all-tasks"
 
@@ -28,8 +28,17 @@ class MyCustomDate extends Date {
   const fiveDaysAwayRaw = todayRaw.addDays(5);
     let fiveDaysAway = JSON.stringify(fiveDaysAwayRaw).slice(1, 11);
 
+let resetFolderHighlight = () => {
+    inboxFolder.style.backgroundColor = 'var(--nav-bg-color)';
+    todayFolder.style.backgroundColor = 'var(--nav-bg-color)';
+    upcomingFolder.style.backgroundColor = 'var(--nav-bg-color)';
+    priorityFolder.style.backgroundColor = 'var(--nav-bg-color)';
+    completedFolder.style.backgroundColor = 'var(--nav-bg-color)';
+};
     
 let generateInbox = () => {
+    resetFolderHighlight();
+    inboxFolder.style.backgroundColor = 'var(--color-selected)';
     removeInboxCards();
     contentHeader.textContent = 'inbox';
     let tasks = getAllTasks();
@@ -101,6 +110,8 @@ let generateInbox = () => {
 };
 
 let generateToday = () => {
+    resetFolderHighlight();
+    todayFolder.style.backgroundColor = 'var(--color-selected)';
     removeInboxCards();
     contentHeader.textContent = 'today';
     let tasks = getAllTasks();
@@ -174,6 +185,8 @@ let generateToday = () => {
 }
 
 let generateUpcoming = () => {
+    resetFolderHighlight();
+    upcomingFolder.style.backgroundColor = 'var(--color-selected)';
     removeInboxCards();
     contentHeader.textContent = 'upcoming';
     sectionOne.textContent = 'Tomorrow';
@@ -512,6 +525,8 @@ let generateUpcoming = () => {
 }
 
 let generatePriority = () => {
+    resetFolderHighlight();
+    priorityFolder.style.backgroundColor = 'var(--color-selected)';
     removeInboxCards();
     contentHeader.textContent = 'priority';
     sectionOne.textContent = 'High';
