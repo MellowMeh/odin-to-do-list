@@ -128,7 +128,7 @@ let generateToday = () => {
     contentHeader.textContent = 'today';
     let tasks = getAllTasks();
     tasks.forEach((task) => {
-        if (task.dueDate === today) {
+        if (task.dueDate === today && task.project !== 'complete') {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
@@ -217,7 +217,7 @@ let generateUpcoming = () => {
     sectionFive.textContent = fiveDaysAway;
     let tasks = getAllTasks();
     tasks.forEach((task) => {
-        if (task.dueDate === tomorrow) {
+        if (task.dueDate === tomorrow && task.project !== 'complete') {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
@@ -291,7 +291,7 @@ let generateUpcoming = () => {
 
             sectionOne.appendChild(taskCard);
         }
-        if (task.dueDate === twoDaysAway) {
+        if (task.dueDate === twoDaysAway && task.project !== 'complete') {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
@@ -356,7 +356,7 @@ let generateUpcoming = () => {
 
             sectionTwo.appendChild(taskCard);
         }
-        if (task.dueDate === threeDaysAway) {
+        if (task.dueDate === threeDaysAway && task.project !== 'complete') {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
@@ -421,7 +421,7 @@ let generateUpcoming = () => {
 
             sectionThree.appendChild(taskCard);
         }
-        if (task.dueDate === fourDaysAway) {
+        if (task.dueDate === fourDaysAway && task.project !== 'complete') {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
@@ -486,7 +486,7 @@ let generateUpcoming = () => {
 
             sectionFour.appendChild(taskCard);
         }
-        if (task.dueDate === fiveDaysAway) {
+        if (task.dueDate === fiveDaysAway && task.project !== 'complete') {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
@@ -564,7 +564,7 @@ let generatePriority = () => {
     sectionThree.textContent = 'Low';
     let tasks = getAllTasks();
     tasks.forEach((task) => {
-        if (task.priority === 'high') {
+        if (task.priority === 'high' && task.project !== 'complete') {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
@@ -638,7 +638,7 @@ let generatePriority = () => {
 
             sectionOne.appendChild(taskCard);
         }
-        if (task.priority === 'medium') {
+        if (task.priority === 'medium' && task.project !== 'complete') {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
@@ -703,7 +703,7 @@ let generatePriority = () => {
 
             sectionTwo.appendChild(taskCard);
         }
-        if (task.priority === 'low') {
+        if (task.priority === 'low' && task.project !== 'complete') {
             let taskCard = document.createElement('div');
             taskCard.setAttribute('class', 'task-card');
 
